@@ -9,175 +9,175 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-  :root{
-    --bg:#ffffff;--surface:#faf9f7;--ink:#1b2430;--navy:#162238;--navy-700:#223354;
-    --crimson:#8a2435;--teal:#2f6a5f;--muted:#6b7280;--line:#e8e5e1;--line-strong:#d8d4cd;
-    --maxw:1180px;
-    --serif:"Playfair Display", Georgia, "Times New Roman", serif;
-    --sans:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
-  a{color:inherit}
-  img{max-width:100%;display:block}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
-  h1,h2,h3{font-family:var(--serif);font-weight:600;color:var(--navy);line-height:1.08;margin:0}
-  .skip{position:absolute;left:-999px;top:0;background:var(--navy);color:#fff;padding:10px 16px;z-index:100}
-  .skip:focus{left:12px;top:12px}
+:root{
+--bg:#ffffff;--surface:#faf9f7;--ink:#1b2430;--navy:#162238;--navy-700:#223354;
+--crimson:#8a2435;--teal:#2f6a5f;--muted:#6b7280;--line:#e8e5e1;--line-strong:#d8d4cd;
+--maxw:1180px;
+--serif:"Playfair Display", Georgia, "Times New Roman", serif;
+--sans:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;color:var(--navy);line-height:1.08;margin:0}
+.skip{position:absolute;left:-999px;top:0;background:var(--navy);color:#fff;padding:10px 16px;z-index:100}
+.skip:focus{left:12px;top:12px}
 
-  header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
-  .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 28px;max-width:var(--maxw);margin:0 auto}
-  .brand{display:flex;align-items:center;gap:14px;text-decoration:none}
-  .mono{width:46px;height:46px;flex:0 0 auto;background:var(--crimson);color:#fff;font-family:var(--serif);font-weight:700;font-size:19px;display:grid;place-items:center;border-radius:3px}
-  .brand .bname{font-weight:700;font-size:16px;color:var(--navy);line-height:1.15}
-  .brand .btag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-  nav.main{display:flex;gap:26px;align-items:center}
-  nav.main a{text-decoration:none;font-size:14.5px;font-weight:500;color:var(--ink);padding:6px 0;position:relative;white-space:nowrap}
-  nav.main a.active{color:var(--crimson)}
-  nav.main a.active::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--crimson)}
-  nav.main a:hover{color:var(--crimson)}
-  .menu-btn{display:none;background:none;border:1px solid var(--line-strong);border-radius:4px;padding:8px 14px;font-family:var(--sans);font-size:14px;font-weight:600;cursor:pointer;color:var(--navy)}
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 28px;max-width:var(--maxw);margin:0 auto}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.mono{width:46px;height:46px;flex:0 0 auto;background:var(--crimson);color:#fff;font-family:var(--serif);font-weight:700;font-size:19px;display:grid;place-items:center;border-radius:3px}
+.brand .bname{font-weight:700;font-size:16px;color:var(--navy);line-height:1.15}
+.brand .btag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+nav.main{display:flex;gap:26px;align-items:center}
+nav.main a{text-decoration:none;font-size:14.5px;font-weight:500;color:var(--ink);padding:6px 0;position:relative;white-space:nowrap}
+nav.main a.active{color:var(--crimson)}
+nav.main a.active::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--crimson)}
+nav.main a:hover{color:var(--crimson)}
+.menu-btn{display:none;background:none;border:1px solid var(--line-strong);border-radius:4px;padding:8px 14px;font-family:var(--sans);font-size:14px;font-weight:600;cursor:pointer;color:var(--navy)}
 
-  .hero{padding:72px 0 56px}
-  .hero-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:56px;align-items:center}
-  .hero h1{font-size:clamp(42px,5.6vw,72px);margin:18px 0 0;letter-spacing:-.01em}
-  .hero .role{color:var(--crimson);font-weight:600;font-size:18px;margin-top:20px}
-  .hero .lede{color:#3a4453;font-size:18.5px;max-width:34em;margin-top:18px}
-  .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
-  .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;padding:14px 22px;border-radius:4px;transition:.15s}
-  .btn-primary{background:var(--navy);color:#fff}
-  .btn-primary:hover{background:var(--navy-700)}
-  .btn-ghost{background:#fff;color:var(--navy);border:1px solid var(--line-strong)}
-  .btn-ghost:hover{border-color:var(--navy)}
-  .ids{display:flex;flex-wrap:wrap;gap:22px;margin-top:26px}
-  .ids a{font-size:13.5px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line-strong);padding-bottom:2px}
-  .ids a:hover{color:var(--crimson);border-color:var(--crimson)}
+.hero{padding:72px 0 56px}
+.hero-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(42px,5.6vw,72px);margin:18px 0 0;letter-spacing:-.01em}
+.hero .role{color:var(--crimson);font-weight:600;font-size:18px;margin-top:20px}
+.hero .lede{color:#3a4453;font-size:18.5px;max-width:34em;margin-top:18px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;padding:14px 22px;border-radius:4px;transition:.15s}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-primary:hover{background:var(--navy-700)}
+.btn-ghost{background:#fff;color:var(--navy);border:1px solid var(--line-strong)}
+.btn-ghost:hover{border-color:var(--navy)}
+.ids{display:flex;flex-wrap:wrap;gap:22px;margin-top:26px}
+.ids a{font-size:13.5px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line-strong);padding-bottom:2px}
+.ids a:hover{color:var(--crimson);border-color:var(--crimson)}
 
-  .photo-card{border:1px solid var(--line);border-radius:6px;overflow:hidden;box-shadow:0 20px 50px -30px rgba(22,34,56,.4)}
-  .portrait{width:100%;aspect-ratio:25/32;object-fit:cover;object-position:center top;background:#eef1f5}
-  .photo-cap{background:var(--navy);color:#fff;display:flex;justify-content:space-between;gap:12px;padding:14px 18px;font-size:12.5px}
-  .photo-cap span:last-child{color:rgba(255,255,255,.7);white-space:nowrap}
+.photo-card{border:1px solid var(--line);border-radius:6px;overflow:hidden;box-shadow:0 20px 50px -30px rgba(22,34,56,.4)}
+.portrait{width:100%;aspect-ratio:25/32;object-fit:cover;object-position:center top;background:#eef1f5}
+.photo-cap{background:var(--navy);color:#fff;display:flex;justify-content:space-between;gap:12px;padding:14px 18px;font-size:12.5px}
+.photo-cap span:last-child{color:rgba(255,255,255,.7);white-space:nowrap}
 
-  .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:40px 0}
-  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-  .stat .num{font-family:var(--serif);font-size:44px;font-weight:600;color:var(--navy);line-height:1}
-  .stat .lbl{color:var(--muted);font-size:14px;margin-top:8px}
-  .stats .note{color:var(--muted);font-size:12.5px;margin-top:26px}
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:40px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.stat .num{font-family:var(--serif);font-size:44px;font-weight:600;color:var(--navy);line-height:1}
+.stat .lbl{color:var(--muted);font-size:14px;margin-top:8px}
+.stats .note{color:var(--muted);font-size:12.5px;margin-top:26px}
 
-  section{padding:84px 0}
-  .sec-head{max-width:42em}
-  .sec-head h2{font-size:clamp(30px,3.6vw,42px);margin-top:14px}
-  .sec-head .sub{color:#3a4453;font-size:18px;margin-top:14px}
-  .sec-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
-  .more{color:var(--crimson);text-decoration:none;font-weight:600;font-size:15px;white-space:nowrap}
-  .more:hover{text-decoration:underline}
+section{padding:84px 0}
+.sec-head{max-width:42em}
+.sec-head h2{font-size:clamp(30px,3.6vw,42px);margin-top:14px}
+.sec-head .sub{color:#3a4453;font-size:18px;margin-top:14px}
+.sec-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.more{color:var(--crimson);text-decoration:none;font-weight:600;font-size:15px;white-space:nowrap}
+.more:hover{text-decoration:underline}
 
-  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-  .card{border:1px solid var(--line);border-radius:6px;padding:30px 28px;background:#fff;transition:.18s}
-  .card:hover{border-color:var(--line-strong);box-shadow:0 18px 40px -32px rgba(22,34,56,.5);transform:translateY(-2px)}
-  .card .kcat{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:600}
-  .card h3{font-size:22px;margin:14px 0 10px}
-  .card p{color:#44505f;font-size:15.5px;margin:0}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{border:1px solid var(--line);border-radius:6px;padding:30px 28px;background:#fff;transition:.18s}
+.card:hover{border-color:var(--line-strong);box-shadow:0 18px 40px -32px rgba(22,34,56,.5);transform:translateY(-2px)}
+.card .kcat{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:600}
+.card h3{font-size:22px;margin:14px 0 10px}
+.card p{color:#44505f;font-size:15.5px;margin:0}
 
-  .alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .proj{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-  .proj .p{border:1px solid var(--line);background:#fff;border-radius:6px;padding:28px 26px}
-  .proj .tag{display:inline-block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--crimson);font-weight:600}
-  .proj h3{font-size:19px;margin:12px 0 10px}
-  .proj .meta{color:var(--muted);font-size:13.5px;margin:0 0 4px}
-  .proj .meta b{color:var(--navy);font-weight:600}
-  .proj .yr{font-family:var(--serif);color:var(--navy);font-size:15px;margin-top:6px}
+.alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.proj{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.proj .p{border:1px solid var(--line);background:#fff;border-radius:6px;padding:28px 26px}
+.proj .tag{display:inline-block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--crimson);font-weight:600}
+.proj h3{font-size:19px;margin:12px 0 10px}
+.proj .meta{color:var(--muted);font-size:13.5px;margin:0 0 4px}
+.proj .meta b{color:var(--navy);font-weight:600}
+.proj .yr{font-family:var(--serif);color:var(--navy);font-size:15px;margin-top:6px}
 
-  .pub{border-top:1px solid var(--line);padding:24px 0;display:grid;grid-template-columns:96px 1fr auto;gap:26px;align-items:start}
-  .pub .yr{font-family:var(--serif);font-size:26px;color:var(--navy)}
-  .pub .venue{font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:7px}
-  .pub .cite{color:#2c3542;font-size:15.5px;line-height:1.55}
-  .pub .cite b{color:var(--navy)}
-  .pub .doi{color:var(--muted);font-size:13.5px;text-decoration:none;white-space:nowrap;border-bottom:1px solid var(--line-strong);padding-bottom:2px;align-self:center}
-  .pub .doi:hover{color:var(--crimson);border-color:var(--crimson)}
+.pub{border-top:1px solid var(--line);padding:24px 0;display:grid;grid-template-columns:96px 1fr auto;gap:26px;align-items:start}
+.pub .yr{font-family:var(--serif);font-size:26px;color:var(--navy)}
+.pub .venue{font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:7px}
+.pub .cite{color:#2c3542;font-size:15.5px;line-height:1.55}
+.pub .cite b{color:var(--navy)}
+.pub .doi{color:var(--muted);font-size:13.5px;text-decoration:none;white-space:nowrap;border-bottom:1px solid var(--line-strong);padding-bottom:2px;align-self:center}
+.pub .doi:hover{color:var(--crimson);border-color:var(--crimson)}
 
-  .mini{margin-top:46px}
-  .mini h3{font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:var(--navy);font-family:var(--sans);font-weight:700;margin-bottom:6px}
-  .mini ul{list-style:none;padding:0;margin:0}
-  .mini li{border-top:1px solid var(--line);padding:14px 0;font-size:15px;color:#2c3542}
-  .mini li b{color:var(--navy)}
+.mini{margin-top:46px}
+.mini h3{font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:var(--navy);font-family:var(--sans);font-weight:700;margin-bottom:6px}
+.mini ul{list-style:none;padding:0;margin:0}
+.mini li{border-top:1px solid var(--line);padding:14px 0;font-size:15px;color:#2c3542}
+.mini li b{color:var(--navy)}
 
-  .teach-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;margin-top:8px}
-  .course{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
-  .course .lvl{font-size:11px;font-weight:700;letter-spacing:.05em;color:#fff;background:var(--navy);border-radius:3px;padding:4px 9px;height:fit-content;white-space:nowrap}
-  .course .cn{font-weight:600;color:var(--navy);font-size:16px}
-  .course .cm{color:var(--muted);font-size:13.5px;margin-top:3px}
+.teach-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;margin-top:8px}
+.course{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
+.course .lvl{font-size:11px;font-weight:700;letter-spacing:.05em;color:#fff;background:var(--navy);border-radius:3px;padding:4px 9px;height:fit-content;white-space:nowrap}
+.course .cn{font-weight:600;color:var(--navy);font-size:16px}
+.course .cm{color:var(--muted);font-size:13.5px;margin-top:3px}
 
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px}
-  .tl{list-style:none;padding:0;margin:0}
-  .tl li{border-left:2px solid var(--line-strong);padding:0 0 22px 20px;position:relative}
-  .tl li::before{content:"";position:absolute;left:-6px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--crimson)}
-  .tl li:last-child{padding-bottom:0}
-  .tl .ty{font-size:13px;color:var(--muted)}
-  .tl .th{font-weight:600;color:var(--navy);font-size:16px;margin:2px 0}
-  .tl .ts{font-size:14.5px;color:#44505f}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px}
+.tl{list-style:none;padding:0;margin:0}
+.tl li{border-left:2px solid var(--line-strong);padding:0 0 22px 20px;position:relative}
+.tl li::before{content:"";position:absolute;left:-6px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--crimson)}
+.tl li:last-child{padding-bottom:0}
+.tl .ty{font-size:13px;color:var(--muted)}
+.tl .th{font-weight:600;color:var(--navy);font-size:16px;margin:2px 0}
+.tl .ts{font-size:14.5px;color:#44505f}
 
-  .contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start}
-  .contact a.mail{font-family:var(--serif);font-size:clamp(20px,2.6vw,28px);color:var(--navy);text-decoration:none;border-bottom:2px solid var(--line-strong);word-break:break-all}
-  .contact a.mail:hover{border-color:var(--crimson);color:var(--crimson)}
-  .meta-list{list-style:none;padding:0;margin:0}
-  .meta-list li{padding:14px 0;border-top:1px solid var(--line);font-size:15px}
-  .meta-list li span{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start}
+.contact a.mail{font-family:var(--serif);font-size:clamp(20px,2.6vw,28px);color:var(--navy);text-decoration:none;border-bottom:2px solid var(--line-strong);word-break:break-all}
+.contact a.mail:hover{border-color:var(--crimson);color:var(--crimson)}
+.meta-list{list-style:none;padding:0;margin:0}
+.meta-list li{padding:14px 0;border-top:1px solid var(--line);font-size:15px}
+.meta-list li span{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
 
-  footer.site{background:var(--navy);color:#cdd5e1;padding:52px 0 40px}
-  .foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
-  .foot .fb{font-family:var(--serif);color:#fff;font-size:20px}
-  .foot .fs{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8ea0bb;margin-bottom:6px}
-  .foot nav{display:flex;flex-wrap:wrap;gap:22px}
-  .foot nav a{color:#cdd5e1;text-decoration:none;font-size:14px;border-bottom:1px solid transparent}
-  .foot nav a:hover{color:#fff;border-color:#4d6286}
-  .foot .copy{color:#7e90ad;font-size:13px;margin-top:30px;border-top:1px solid #26385a;padding-top:22px;width:100%}
+footer.site{background:var(--navy);color:#cdd5e1;padding:52px 0 40px}
+.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+.foot .fb{font-family:var(--serif);color:#fff;font-size:20px}
+.foot .fs{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8ea0bb;margin-bottom:6px}
+.foot nav{display:flex;flex-wrap:wrap;gap:22px}
+.foot nav a{color:#cdd5e1;text-decoration:none;font-size:14px;border-bottom:1px solid transparent}
+.foot nav a:hover{color:#fff;border-color:#4d6286}
+.foot .copy{color:#7e90ad;font-size:13px;margin-top:30px;border-top:1px solid #26385a;padding-top:22px;width:100%}
 
-  .ph{background:#fff7ed;border:1px dashed #e0a872;color:#9a5a1e;border-radius:4px;padding:2px 7px;font-size:12.5px;font-weight:600}
+.ph{background:#fff7ed;border:1px dashed #e0a872;color:#9a5a1e;border-radius:4px;padding:2px 7px;font-size:12.5px;font-weight:600}
 
-  @media (max-width:900px){
-    .hero-grid{grid-template-columns:1fr;gap:40px}
-    .hero{padding:48px 0 40px}
-    .stats-grid{grid-template-columns:repeat(2,1fr);gap:28px 20px}
-    .cards3,.proj,.teach-grid,.contact-grid,.about-grid{grid-template-columns:1fr;gap:0}
-    .cards3,.proj{gap:20px}
-    .about-grid{gap:40px}
-    .pub{grid-template-columns:60px 1fr;gap:8px 16px}
-    .pub .doi{grid-column:2;margin-top:6px;align-self:start}
-    nav.main{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:0;padding:8px 28px 18px;box-shadow:0 20px 40px -30px rgba(0,0,0,.4)}
-    nav.main.open{display:flex}
-    nav.main a{width:100%;padding:12px 0;border-bottom:1px solid var(--line)}
-    nav.main a.active::after{display:none}
-    .menu-btn{display:inline-block}
-    header.site .bar{position:relative}
-    section{padding:60px 0}
-  }
+@media (max-width:900px){
+.hero-grid{grid-template-columns:1fr;gap:40px}
+.hero{padding:48px 0 40px}
+.stats-grid{grid-template-columns:repeat(2,1fr);gap:28px 20px}
+.cards3,.proj,.teach-grid,.contact-grid,.about-grid{grid-template-columns:1fr;gap:0}
+.cards3,.proj{gap:20px}
+.about-grid{gap:40px}
+.pub{grid-template-columns:60px 1fr;gap:8px 16px}
+.pub .doi{grid-column:2;margin-top:6px;align-self:start}
+nav.main{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:0;padding:8px 28px 18px;box-shadow:0 20px 40px -30px rgba(0,0,0,.4)}
+nav.main.open{display:flex}
+nav.main a{width:100%;padding:12px 0;border-bottom:1px solid var(--line)}
+nav.main a.active::after{display:none}
+.menu-btn{display:inline-block}
+header.site .bar{position:relative}
+section{padding:60px 0}
+}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site">
-  <div class="bar">
-    <a class="brand" href="#top" aria-label="Home">
-      <span class="mono">FA</span>
-      <span>
-        <span class="bname">Felix-Constantin Adochiei</span><br>
-        <span class="btag">Research &amp; academic profile</span>
-      </span>
-    </a>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
-    <nav class="main" id="nav" aria-label="Main navigation">
-      <a href="#top" class="active">Overview</a>
-      <a href="#research">Research</a>
-      <a href="publications.html">Publications</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+<div class="bar">
+<a class="brand" href="#top" aria-label="Home">
+<span class="mono">FA</span>
+<span>
+<span class="bname">Felix-Constantin Adochiei</span><br>
+<span class="btag">Research &amp; academic profile</span>
+</span>
+</a>
+<button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav class="main" id="nav" aria-label="Main navigation">
+<a href="#top" class="active">Overview</a>
+<a href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="#teaching">Teaching</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
 </header>
 
 <main id="main">
@@ -185,272 +185,275 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow">Electrical engineering · Instrumentation · Research</p>
-      <h1>Felix-Constantin<br>Adochiei</h1>
-      <p class="role">Associate Professor, PhD</p>
-      <p class="lede">Intelligent electronic systems, multisensor fusion and integrated systems for aerospace, security and critical-infrastructure applications — from MEMS inertial navigation to biomedical signal processing and interoperable health data. Faculty of Electrical Engineering, National University of Science and Technology POLITEHNICA Bucharest.</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="#research">Explore research →</a>
-        <a class="btn btn-ghost" href="publications.html">View publications</a>
-      </div>
-      <div class="ids">
-        <a href="mailto:felix.adochiei@upb.ro">Email ↗</a>
-        <a href="https://scholar.google.com/citations?user=iZap6FMAAAAJ&amp;hl=ro" target="_blank" rel="noopener">Google Scholar ↗</a>
-        <a href="https://orcid.org/0000-0001-8176-0113" target="_blank" rel="noopener">ORCID ↗</a>
-        <a href="#" data-ph>Scopus ↗</a>
-      </div>
-    </div>
-    <div class="photo-card">
-      <img class="portrait" src="photo.jpg" alt="Felix-Constantin Adochiei" />
-      <div class="photo-cap">
-        <span>Faculty of Electrical Engineering · POLITEHNICA Bucharest</span>
-        <span>Bucharest</span>
-      </div>
-    </div>
-  </div>
+<div class="wrap hero-grid">
+<div>
+<p class="eyebrow">Electrical engineering · Instrumentation · Research</p>
+<h1>Felix-Constantin<br>Adochiei</h1>
+<p class="role">Associate Professor, PhD</p>
+<p class="lede">Intelligent electronic systems, multisensor fusion and integrated systems for aerospace, security and critical-infrastructure applications — from MEMS inertial navigation to biomedical signal processing and interoperable health data. Faculty of Electrical Engineering, National University of Science and Technology POLITEHNICA Bucharest.</p>
+<div class="cta">
+<a class="btn btn-primary" href="research.html">Explore research →</a>
+<a class="btn btn-ghost" href="publications.html">View publications</a>
+</div>
+<div class="ids">
+<a href="mailto:felix.adochiei@upb.ro">Email ↗</a>
+<a href="https://scholar.google.com/citations?user=iZap6FMAAAAJ&amp;hl=ro" target="_blank" rel="noopener">Google Scholar ↗</a>
+<a href="https://orcid.org/0000-0001-8176-0113" target="_blank" rel="noopener">ORCID ↗</a>
+<a href="#" data-ph>Scopus ↗</a>
+</div>
+</div>
+<div class="photo-card">
+<img class="portrait" src="photo.jpg" alt="Felix-Constantin Adochiei" />
+<div class="photo-cap">
+<span>Faculty of Electrical Engineering · POLITEHNICA Bucharest</span>
+<span>Bucharest</span>
+</div>
+</div>
+</div>
 </section>
 
 <!-- STATS -->
 <div class="stats">
-  <div class="wrap">
-    <div class="stats-grid">
-      <div class="stat"><div class="num">122</div><div class="lbl">Research outputs catalogued</div></div>
-      <div class="stat"><div class="num">23</div><div class="lbl">Projects in the portfolio</div></div>
-      <div class="stat"><div class="num">7</div><div class="lbl">Teaching disciplines</div></div>
-      <div class="stat"><div class="num">2021</div><div class="lbl">Associate Professor since</div></div>
-    </div>
-    <p class="note">Catalogue counts cover the supplied records, including books, teaching materials, articles, thesis and patent publications.</p>
-  </div>
+<div class="wrap">
+<div class="stats-grid">
+<div class="stat"><div class="num">122</div><div class="lbl">Research outputs catalogued</div></div>
+<div class="stat"><div class="num">23</div><div class="lbl">Projects in the portfolio</div></div>
+<div class="stat"><div class="num">7</div><div class="lbl">Teaching disciplines</div></div>
+<div class="stat"><div class="num">2021</div><div class="lbl">Associate Professor since</div></div>
+</div>
+<p class="note">Catalogue counts cover the supplied records, including books, teaching materials, articles, thesis and patent publications.</p>
+</div>
 </div>
 
 <!-- RESEARCH -->
 <section id="research">
-  <div class="wrap">
-    <div class="sec-head" style="margin-bottom:40px">
-      <p class="eyebrow">Research interests</p>
-      <h2>Intelligent systems, from sensor to signal.</h2>
-      <p class="sub">Instrumentation, embedded platforms and intelligent processing across aerospace, biomedical and critical-infrastructure applications.</p>
-    </div>
-    <div class="cards3">
-      <article class="card">
-        <p class="kcat">01 / Navigation</p>
-        <h3>Inertial navigation &amp; sensor fusion</h3>
-        <p>Strap-down INS/MAGNETO/GPS fusion on MEMS sensors for high-precision global positioning of airborne equipment.</p>
-      </article>
-      <article class="card">
-        <p class="kcat">02 / Biosignals</p>
-        <h3>Biomedical signals &amp; monitoring</h3>
-        <p>EEG and physiological-signal processing, biosensors, machine-learning analysis and real-time biomonitoring platforms.</p>
-      </article>
-      <article class="card">
-        <p class="kcat">03 / Integrated systems</p>
-        <h3>Embedded &amp; interoperable systems</h3>
-        <p>Embedded platforms, data acquisition, HL7 FHIR / IoMT interoperability, and electronic systems for critical infrastructures.</p>
-      </article>
-    </div>
-  </div>
+<div class="wrap">
+<div class="sec-top">
+<div class="sec-head" style="margin-bottom:0">
+<p class="eyebrow">Research interests</p>
+<h2>Intelligent systems, from sensor to signal.</h2>
+<p class="sub">Instrumentation, embedded platforms and intelligent processing across aerospace, biomedical and critical-infrastructure applications.</p>
+</div>
+<a class="more" href="research.html">Research portfolio →</a>
+</div>
+<div class="cards3">
+<article class="card">
+<p class="kcat">01 / Navigation</p>
+<h3>Inertial navigation &amp; sensor fusion</h3>
+<p>Strap-down INS/MAGNETO/GPS fusion on MEMS sensors for high-precision global positioning of airborne equipment.</p>
+</article>
+<article class="card">
+<p class="kcat">02 / Biosignals</p>
+<h3>Biomedical signals &amp; monitoring</h3>
+<p>EEG and physiological-signal processing, biosensors, machine-learning analysis and real-time biomonitoring platforms.</p>
+</article>
+<article class="card">
+<p class="kcat">03 / Integrated systems</p>
+<h3>Embedded &amp; interoperable systems</h3>
+<p>Embedded platforms, data acquisition, HL7 FHIR / IoMT interoperability, and electronic systems for critical infrastructures.</p>
+</article>
+</div>
+</div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="alt">
-  <div class="wrap">
-    <div class="sec-top">
-      <div class="sec-head">
-        <p class="eyebrow">Research &amp; collaboration</p>
-        <h2>Leadership &amp; collaboration</h2>
-      </div>
-    </div>
-    <div class="proj">
-      <article class="p">
-        <span class="tag">CAPSOFT</span>
-        <h3>Multi-criteria decision tool for CO₂-capture technologies</h3>
-        <p class="meta"><b>Project director</b></p>
-        <p class="meta">PN-III-P2-2.1-PTE-2021-0520 · 106PTE</p>
-        <p class="yr">2022 –</p>
-      </article>
-      <article class="p">
-        <span class="tag">INS / MAGNETO / GPS</span>
-        <h3>Strap-down inertial navigation for airborne equipment</h3>
-        <p class="meta"><b>Project director</b></p>
-        <p class="meta">MEMS sensor fusion · high-precision positioning</p>
-        <p class="yr">2019 –</p>
-      </article>
-      <article class="p">
-        <span class="tag">AOSR</span>
-        <h3>Biomonitoring &amp; localization platform for military missions</h3>
-        <p class="meta"><b>Project director</b></p>
-        <p class="meta">Academy of Romanian Scientists grant</p>
-        <p class="yr">AOSR</p>
-      </article>
-    </div>
-  </div>
+<div class="wrap">
+<div class="sec-top">
+<div class="sec-head">
+<p class="eyebrow">Research &amp; collaboration</p>
+<h2>Leadership &amp; collaboration</h2>
+</div>
+</div>
+<div class="proj">
+<article class="p">
+<span class="tag">CAPSOFT</span>
+<h3>Multi-criteria decision tool for CO₂-capture technologies</h3>
+<p class="meta"><b>Project director</b></p>
+<p class="meta">PN-III-P2-2.1-PTE-2021-0520 · 106PTE</p>
+<p class="yr">2022 –</p>
+</article>
+<article class="p">
+<span class="tag">INS / MAGNETO / GPS</span>
+<h3>Strap-down inertial navigation for airborne equipment</h3>
+<p class="meta"><b>Project director</b></p>
+<p class="meta">MEMS sensor fusion · high-precision positioning</p>
+<p class="yr">2019 –</p>
+</article>
+<article class="p">
+<span class="tag">AOSR</span>
+<h3>Biomonitoring &amp; localization platform for military missions</h3>
+<p class="meta"><b>Project director</b></p>
+<p class="meta">Academy of Romanian Scientists grant</p>
+<p class="yr">AOSR</p>
+</article>
+</div>
+</div>
 </section>
 
 <!-- PUBLICATIONS -->
 <section id="publications">
-  <div class="wrap">
-    <div class="sec-top">
-      <div class="sec-head">
-        <p class="eyebrow">Selected publications</p>
-        <h2>Publications &amp; contributions</h2>
-      </div>
-      <a class="more" href="publications.html">Full list →</a>
-    </div>
+<div class="wrap">
+<div class="sec-top">
+<div class="sec-head">
+<p class="eyebrow">Selected publications</p>
+<h2>Publications &amp; contributions</h2>
+</div>
+<a class="more" href="publications.html">Full list →</a>
+</div>
 
-    <div class="pub">
-      <div class="yr">2026</div>
-      <div>
-        <div class="venue">Applied Sciences · WOS</div>
-        <div class="cite"><b>F.-C. Adochiei</b>, A. Ioniță, I.-R. Adochiei, O.-I. Știrbu, G. Petroiu, F.-C. Argatu — Computational Analysis of EEG Responses to Anxiogenic Stimuli Using Machine-Learning Algorithms. <i>Appl. Sci.</i> 16(3):1504.</div>
-      </div>
-      <a class="doi" href="https://doi.org/10.3390/app16031504" target="_blank" rel="noopener">DOI ↗</a>
-    </div>
+<div class="pub">
+<div class="yr">2026</div>
+<div>
+<div class="venue">Applied Sciences · WOS</div>
+<div class="cite"><b>F.-C. Adochiei</b>, A. Ioniță, I.-R. Adochiei, O.-I. Știrbu, G. Petroiu, F.-C. Argatu — Computational Analysis of EEG Responses to Anxiogenic Stimuli Using Machine-Learning Algorithms. <i>Appl. Sci.</i> 16(3):1504.</div>
+</div>
+<a class="doi" href="https://doi.org/10.3390/app16031504" target="_blank" rel="noopener">DOI ↗</a>
+</div>
 
-    <div class="pub">
-      <div class="yr">2026</div>
-      <div>
-        <div class="venue">Sensors · WOS</div>
-        <div class="cite">O.-I. Știrbu, F.-C. Argatu, <b>F.-C. Adochiei</b>, B.-A. Enache, G.-C. Serițan — Depression Detection from Three-Channel Resting-State EEG Using a Hybrid Conv1D and Spectral–Statistical Fusion Model. <i>Sensors</i> 26(5):1417.</div>
-      </div>
-      <a class="doi" href="https://doi.org/10.3390/s26051417" target="_blank" rel="noopener">DOI ↗</a>
-    </div>
+<div class="pub">
+<div class="yr">2026</div>
+<div>
+<div class="venue">Sensors · WOS</div>
+<div class="cite">O.-I. Știrbu, F.-C. Argatu, <b>F.-C. Adochiei</b>, B.-A. Enache, G.-C. Serițan — Depression Detection from Three-Channel Resting-State EEG Using a Hybrid Conv1D and Spectral–Statistical Fusion Model. <i>Sensors</i> 26(5):1417.</div>
+</div>
+<a class="doi" href="https://doi.org/10.3390/s26051417" target="_blank" rel="noopener">DOI ↗</a>
+</div>
 
-    <div class="pub">
-      <div class="yr">2026</div>
-      <div>
-        <div class="venue">Sensors · WOS</div>
-        <div class="cite">Ș.-T. Nicolescu, <b>F.-C. Adochiei</b>, F.-C. Argatu, B.-A. Enache, G.-C. Serițan — Deception Detection from Five-Channel Wearable EEG on LieWaves: A Reproducible Baseline. <i>Sensors</i> 26(3):1027.</div>
-      </div>
-      <a class="doi" href="https://doi.org/10.3390/s26031027" target="_blank" rel="noopener">DOI ↗</a>
-    </div>
+<div class="pub">
+<div class="yr">2026</div>
+<div>
+<div class="venue">Sensors · WOS</div>
+<div class="cite">Ș.-T. Nicolescu, <b>F.-C. Adochiei</b>, F.-C. Argatu, B.-A. Enache, G.-C. Serițan — Deception Detection from Five-Channel Wearable EEG on LieWaves: A Reproducible Baseline. <i>Sensors</i> 26(3):1027.</div>
+</div>
+<a class="doi" href="https://doi.org/10.3390/s26031027" target="_blank" rel="noopener">DOI ↗</a>
+</div>
 
-    <div class="pub">
-      <div class="yr">2025</div>
-      <div>
-        <div class="venue">Applied Sciences · WOS</div>
-        <div class="cite"><b>F.-C. Adochiei</b>, F.-A. Țoi, I.-R. Adochiei, F.-C. Argatu, G. Serițan, G.-G. Petroiu — HL7 FHIR-Based Open-Source Framework for Real-Time Biomedical Signal Acquisition and IoMT Interoperability. <i>Appl. Sci.</i> 15(23):12803.</div>
-      </div>
-      <a class="doi" href="https://doi.org/10.3390/app152312803" target="_blank" rel="noopener">DOI ↗</a>
-    </div>
+<div class="pub">
+<div class="yr">2025</div>
+<div>
+<div class="venue">Applied Sciences · WOS</div>
+<div class="cite"><b>F.-C. Adochiei</b>, F.-A. Țoi, I.-R. Adochiei, F.-C. Argatu, G. Serițan, G.-G. Petroiu — HL7 FHIR-Based Open-Source Framework for Real-Time Biomedical Signal Acquisition and IoMT Interoperability. <i>Appl. Sci.</i> 15(23):12803.</div>
+</div>
+<a class="doi" href="https://doi.org/10.3390/app152312803" target="_blank" rel="noopener">DOI ↗</a>
+</div>
 
-    <div class="pub">
-      <div class="yr">2020</div>
-      <div>
-        <div class="venue">Patent · OSIM</div>
-        <div class="cite">Biomonitoring system for persons subjected to tests based on virtual reality in a virtual cube with immersion. <b>RO134535-A2</b> (G.-C. Serițan, C. Cepișcă, S.-D. Grigorescu, F.-C. Argatu, C.-K. Banica, <b>F.-C. Adochiei</b>, B.-A. Eba, R.-F. Porumb).</div>
-      </div>
-    </div>
+<div class="pub">
+<div class="yr">2020</div>
+<div>
+<div class="venue">Patent · OSIM</div>
+<div class="cite">Biomonitoring system for persons subjected to tests based on virtual reality in a virtual cube with immersion. <b>RO134535-A2</b> (G.-C. Serițan, C. Cepișcă, S.-D. Grigorescu, F.-C. Argatu, C.-K. Banica, <b>F.-C. Adochiei</b>, B.-A. Eba, R.-F. Porumb).</div>
+</div>
+</div>
 
-    <div class="mini">
-      <h3>Selected books</h3>
-      <ul>
-        <li><b>F. Adochiei</b> — <i>Metode inovative pentru investigarea cuplărilor biosistemelor dinamice complexe.</i> PRINTECH, 2016. ISBN 978-606-23-0714-1.</li>
-        <li>G. Serițan, <b>F. Adochiei</b>, F. Argatu, C. Cepișcă — <i>Senzori biomedicali și instrumentație.</i> Politehnica Press, 2015. ISBN 978-606-515-650-0.</li>
-        <li>M. Covrig, <b>F. Adochiei</b>, V. K. Stergios — <i>Electromechanical Converters — Selected Topics in Applied Electrotechnics.</i> IWN, Athens, 2012. ISBN 978-960-508-052-5.</li>
-      </ul>
-    </div>
-  </div>
+<div class="mini">
+<h3>Selected books</h3>
+<ul>
+<li><b>F. Adochiei</b> — <i>Metode inovative pentru investigarea cuplărilor biosistemelor dinamice complexe.</i> PRINTECH, 2016. ISBN 978-606-23-0714-1.</li>
+<li>G. Serițan, <b>F. Adochiei</b>, F. Argatu, C. Cepișcă — <i>Senzori biomedicali și instrumentație.</i> Politehnica Press, 2015. ISBN 978-606-515-650-0.</li>
+<li>M. Covrig, <b>F. Adochiei</b>, V. K. Stergios — <i>Electromechanical Converters — Selected Topics in Applied Electrotechnics.</i> IWN, Athens, 2012. ISBN 978-960-508-052-5.</li>
+</ul>
+</div>
+</div>
 </section>
 
 <!-- TEACHING -->
 <section id="teaching" class="alt">
-  <div class="wrap">
-    <div class="sec-head" style="margin-bottom:34px">
-      <p class="eyebrow">Teaching &amp; academic practice</p>
-      <h2>Bringing research into the lecture hall.</h2>
-      <p class="sub">Teaching since 2014 at the Faculty of Electrical Engineering — Department of Measurements, Electrical Apparatus and Static Converters. Areas reflected in authored course materials and lab guides:</p>
-    </div>
-    <div class="teach-grid">
-      <div class="course"><span class="lvl">BSc</span><div><div class="cn">Communication interfaces and buses</div><div class="cm">Year 4 · ID series</div></div></div><div class="course"><span class="lvl">BSc</span><div><div class="cn">Robot programming</div><div class="cm">Year 4 · ID series</div></div></div>
-      <div class="course"><span class="lvl">MSc</span><div><div class="cn">Integrated Data Acquisition Systems</div><div class="cm">Year 2 · ISEIA series</div></div></div><div class="course"><span class="lvl">BSc</span><div><div class="cn">Measurements and instrumentation</div><div class="cm">Year 4 · Series B · Faculty of Materials Science</div></div></div>
-      <div class="course"><span class="lvl">BSc</span><div><div class="cn">Clinical engineering</div><div class="cm">Year 3 · ESM · Faculty of Medical Engineering</div></div></div><div class="course"><span class="lvl">BSc</span><div><div class="cn">Virtual instrumentation for medicine</div><div class="cm">Year 4 · ESM · Faculty of Medical Engineering</div></div></div>
-      <div class="course"><span class="lvl">MSc</span><div><div class="cn">E-health measurement &amp; monitoring systems using IoT</div><div class="cm">Year 1 · TMIM · Faculty of Medical Engineering</div></div></div><div class="course"><span class="lvl">MSc</span><div><div class="cn">Medical electronics &amp; electrical safety</div><div class="cm">Year 2 · IM · Faculty of Medical Engineering</div></div></div>
-    </div>
-    
-  </div>
+<div class="wrap">
+<div class="sec-head" style="margin-bottom:34px">
+<p class="eyebrow">Teaching &amp; academic practice</p>
+<h2>Bringing research into the lecture hall.</h2>
+<p class="sub">Teaching since 2014 at the Faculty of Electrical Engineering — Department of Measurements, Electrical Apparatus and Static Converters. Areas reflected in authored course materials and lab guides:</p>
+</div>
+<div class="teach-grid">
+<div class="course"><span class="lvl">BSc</span><div><div class="cn">Communication interfaces and buses</div><div class="cm">Year 4 · ID series</div></div></div><div class="course"><span class="lvl">BSc</span><div><div class="cn">Robot programming</div><div class="cm">Year 4 · ID series</div></div></div>
+<div class="course"><span class="lvl">MSc</span><div><div class="cn">Integrated Data Acquisition Systems</div><div class="cm">Year 2 · ISEIA series</div></div></div><div class="course"><span class="lvl">BSc</span><div><div class="cn">Measurements and instrumentation</div><div class="cm">Year 4 · Series B · Faculty of Materials Science</div></div></div>
+<div class="course"><span class="lvl">BSc</span><div><div class="cn">Clinical engineering</div><div class="cm">Year 3 · ESM · Faculty of Medical Engineering</div></div></div><div class="course"><span class="lvl">BSc</span><div><div class="cn">Virtual instrumentation for medicine</div><div class="cm">Year 4 · ESM · Faculty of Medical Engineering</div></div></div>
+<div class="course"><span class="lvl">MSc</span><div><div class="cn">E-health measurement &amp; monitoring systems using IoT</div><div class="cm">Year 1 · TMIM · Faculty of Medical Engineering</div></div></div><div class="course"><span class="lvl">MSc</span><div><div class="cn">Medical electronics &amp; electrical safety</div><div class="cm">Year 2 · IM · Faculty of Medical Engineering</div></div></div>
+</div>
+
+</div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="wrap">
-    <div class="sec-head" style="margin-bottom:38px">
-      <p class="eyebrow">About</p>
-      <h2>Background.</h2>
-    </div>
-    <div class="about-grid">
-      <div>
-        <p class="eyebrow" style="color:var(--navy);margin-bottom:18px">Appointments</p>
-        <ul class="tl">
-          <li><div class="ty">2020 – present</div><div class="th">Associate Professor (Conferențiar)</div><div class="ts">Faculty of Electrical Engineering, UNST POLITEHNICA Bucharest — Dept. of Measurements, Electrical Apparatus &amp; Static Converters.</div></li>
-          <li><div class="ty">2016 – 2020</div><div class="th">Lecturer (Șef de lucrări)</div><div class="ts">Faculty of Electrical Engineering, POLITEHNICA Bucharest.</div></li>
-          <li><div class="ty">2014 – 2016</div><div class="th">Teaching Assistant</div><div class="ts">Faculty of Electrical Engineering, POLITEHNICA Bucharest.</div></li>
-          <li><div class="ty">2013 – 2014</div><div class="th">DAAD Research Fellow</div><div class="ts">Ernst-Abbe-Fachhochschule Jena, University of Applied Sciences, Germany.</div></li>
-        </ul>
-      </div>
-      <div>
-        <p class="eyebrow" style="color:var(--navy);margin-bottom:18px">Education &amp; distinctions</p>
-        <ul class="tl">
-          <li><div class="ty">2021 – 2023</div><div class="th">MSc Robotics</div><div class="ts">UNST POLITEHNICA Bucharest.</div></li>
-          <li><div class="ty">2010 – 2014</div><div class="th">PhD, Electronics &amp; Telecommunications Eng.</div><div class="ts">Gheorghe Asachi Technical University of Iași — biomedical signal processing on embedded systems.</div></li><li><div class="ty">2010 – 2013</div><div class="th">MSc Clinical Engineering</div><div class="ts">UMF &ldquo;Gr. T. Popa&rdquo; Iași.</div></li>
-          <li><div class="ty">2004 – 2010</div><div class="th">BSc Medical Bioengineering</div><div class="ts">UMF &ldquo;Gr. T. Popa&rdquo; Iași.</div></li>
-          
-        </ul>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="sec-head" style="margin-bottom:38px">
+<p class="eyebrow">About</p>
+<h2>Background.</h2>
+</div>
+<div class="about-grid">
+<div>
+<p class="eyebrow" style="color:var(--navy);margin-bottom:18px">Appointments</p>
+<ul class="tl">
+<li><div class="ty">2020 – present</div><div class="th">Associate Professor (Conferențiar)</div><div class="ts">Faculty of Electrical Engineering, UNST POLITEHNICA Bucharest — Dept. of Measurements, Electrical Apparatus &amp; Static Converters.</div></li>
+<li><div class="ty">2016 – 2020</div><div class="th">Lecturer (Șef de lucrări)</div><div class="ts">Faculty of Electrical Engineering, POLITEHNICA Bucharest.</div></li>
+<li><div class="ty">2014 – 2016</div><div class="th">Teaching Assistant</div><div class="ts">Faculty of Electrical Engineering, POLITEHNICA Bucharest.</div></li>
+<li><div class="ty">2013 – 2014</div><div class="th">DAAD Research Fellow</div><div class="ts">Ernst-Abbe-Fachhochschule Jena, University of Applied Sciences, Germany.</div></li>
+</ul>
+</div>
+<div>
+<p class="eyebrow" style="color:var(--navy);margin-bottom:18px">Education &amp; distinctions</p>
+<ul class="tl">
+<li><div class="ty">2021 – 2023</div><div class="th">MSc Robotics</div><div class="ts">UNST POLITEHNICA Bucharest.</div></li>
+<li><div class="ty">2010 – 2014</div><div class="th">PhD, Electronics &amp; Telecommunications Eng.</div><div class="ts">Gheorghe Asachi Technical University of Iași — biomedical signal processing on embedded systems.</div></li><li><div class="ty">2010 – 2013</div><div class="th">MSc Clinical Engineering</div><div class="ts">UMF &ldquo;Gr. T. Popa&rdquo; Iași.</div></li>
+<li><div class="ty">2004 – 2010</div><div class="th">BSc Medical Bioengineering</div><div class="ts">UMF &ldquo;Gr. T. Popa&rdquo; Iași.</div></li>
+
+</ul>
+</div>
+</div>
+</div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="alt">
-  <div class="wrap">
-    <div class="sec-head" style="margin-bottom:34px">
-      <p class="eyebrow">Contact</p>
-      <h2>Get in touch.</h2>
-    </div>
-    <div class="contact-grid">
-      <div class="contact">
-        <a class="mail" href="mailto:felix.adochiei@upb.ro">felix.adochiei@upb.ro</a>
-        <p class="sub" style="margin-top:20px;font-size:16px">For research collaborations, project partnerships, doctoral co-supervision and academic correspondence.</p>
-      </div>
-      <ul class="meta-list">
-        <li><span>Institution</span>UNST POLITEHNICA Bucharest</li>
-        <li><span>Faculty</span>Electrical Engineering</li>
-        <li><span>Department</span>Measurements, Electrical Apparatus &amp; Static Converters</li>
-        <li><span>Location</span>Bucharest, Romania</li>
-      </ul>
-    </div>
-  </div>
+<div class="wrap">
+<div class="sec-head" style="margin-bottom:34px">
+<p class="eyebrow">Contact</p>
+<h2>Get in touch.</h2>
+</div>
+<div class="contact-grid">
+<div class="contact">
+<a class="mail" href="mailto:felix.adochiei@upb.ro">felix.adochiei@upb.ro</a>
+<p class="sub" style="margin-top:20px;font-size:16px">For research collaborations, project partnerships, doctoral co-supervision and academic correspondence.</p>
+</div>
+<ul class="meta-list">
+<li><span>Institution</span>UNST POLITEHNICA Bucharest</li>
+<li><span>Faculty</span>Electrical Engineering</li>
+<li><span>Department</span>Measurements, Electrical Apparatus &amp; Static Converters</li>
+<li><span>Location</span>Bucharest, Romania</li>
+</ul>
+</div>
+</div>
 </section>
 </main>
 
 <footer class="site">
-  <div class="wrap foot">
-    <div>
-      <div class="fs">Electrical engineering · POLITEHNICA Bucharest</div>
-      <div class="fb">Felix-Constantin Adochiei</div>
-    </div>
-    <nav aria-label="Academic profiles">
-      <a href="mailto:felix.adochiei@upb.ro">Email ↗</a>
-      <a href="https://scholar.google.com/citations?user=iZap6FMAAAAJ&amp;hl=ro" target="_blank" rel="noopener">Google Scholar ↗</a>
-      <a href="https://orcid.org/0000-0001-8176-0113" target="_blank" rel="noopener">ORCID ↗</a>
-      <a href="#" data-ph>Scopus ↗</a>
-    </nav>
-    <div class="copy">© 2026 Felix-Constantin Adochiei · Bucharest, Romania · Add your ORCID and Scopus links to finish the profile.</div>
-  </div>
+<div class="wrap foot">
+<div>
+<div class="fs">Electrical engineering · POLITEHNICA Bucharest</div>
+<div class="fb">Felix-Constantin Adochiei</div>
+</div>
+<nav aria-label="Academic profiles">
+<a href="mailto:felix.adochiei@upb.ro">Email ↗</a>
+<a href="https://scholar.google.com/citations?user=iZap6FMAAAAJ&amp;hl=ro" target="_blank" rel="noopener">Google Scholar ↗</a>
+<a href="https://orcid.org/0000-0001-8176-0113" target="_blank" rel="noopener">ORCID ↗</a>
+<a href="#" data-ph>Scopus ↗</a>
+</nav>
+<div class="copy">© 2026 Felix-Constantin Adochiei · Bucharest, Romania · Add your ORCID and Scopus links to finish the profile.</div>
+</div>
 </footer>
 
 <script>
-  var mb=document.getElementById('menuBtn'), nav=document.getElementById('nav');
-  mb.addEventListener('click',function(){var open=nav.classList.toggle('open');mb.setAttribute('aria-expanded',open?'true':'false');});
-  nav.addEventListener('click',function(e){ if(e.target.tagName==='A') nav.classList.remove('open'); });
-  var links=[].slice.call(document.querySelectorAll('nav.main a'));
-  var map={}; links.forEach(function(a){ var id=a.getAttribute('href').replace('#',''); if(id) map[id]=a; });
-  var sections=Object.keys(map).map(function(id){ return document.getElementById(id); }).filter(Boolean);
-  function spy(){ var pos=window.scrollY+120, cur='top'; sections.forEach(function(s){ if(s.offsetTop<=pos) cur=s.id; }); links.forEach(function(a){ a.classList.remove('active'); }); if(map[cur]) map[cur].classList.add('active'); }
-  window.addEventListener('scroll',spy,{passive:true}); spy();
-  document.querySelectorAll('a[data-ph]').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); }); });
+var mb=document.getElementById('menuBtn'), nav=document.getElementById('nav');
+mb.addEventListener('click',function(){var open=nav.classList.toggle('open');mb.setAttribute('aria-expanded',open?'true':'false');});
+nav.addEventListener('click',function(e){ if(e.target.tagName==='A') nav.classList.remove('open'); });
+var links=[].slice.call(document.querySelectorAll('nav.main a'));
+var map={}; links.forEach(function(a){ var id=a.getAttribute('href').replace('#',''); if(id) map[id]=a; });
+var sections=Object.keys(map).map(function(id){ return document.getElementById(id); }).filter(Boolean);
+function spy(){ var pos=window.scrollY+120, cur='top'; sections.forEach(function(s){ if(s.offsetTop<=pos) cur=s.id; }); links.forEach(function(a){ a.classList.remove('active'); }); if(map[cur]) map[cur].classList.add('active'); }
+window.addEventListener('scroll',spy,{passive:true}); spy();
+document.querySelectorAll('a[data-ph]').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); }); });
 </script>
 </body>
 </html>
