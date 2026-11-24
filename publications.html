@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Publications | Felix-Constantin Adochiei</title>
+<meta name="description" content="Publications and contributions of Felix-Constantin Adochiei — journal articles, conference papers and books in instrumentation, inertial navigation, biomedical signals and interoperable health systems." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+--bg:#ffffff;--surface:#faf9f7;--ink:#1b2430;--navy:#162238;--navy-700:#223354;
+--crimson:#8a2435;--teal:#2f6a5f;--muted:#6b7280;--line:#e8e5e1;--line-strong:#d8d4cd;
+--maxw:1180px;
+--serif:"Playfair Display", Georgia, "Times New Roman", serif;
+--sans:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;color:var(--navy);line-height:1.08;margin:0}
+.skip{position:absolute;left:-999px;top:0;background:var(--navy);color:#fff;padding:10px 16px;z-index:100}
+.skip:focus{left:12px;top:12px}
+
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 28px;max-width:var(--maxw);margin:0 auto}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.mono{width:46px;height:46px;flex:0 0 auto;background:var(--crimson);color:#fff;font-family:var(--serif);font-weight:700;font-size:19px;display:grid;place-items:center;border-radius:3px}
+.brand .bname{font-weight:700;font-size:16px;color:var(--navy);line-height:1.15}
+.brand .btag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+nav.main{display:flex;gap:26px;align-items:center}
+nav.main a{text-decoration:none;font-size:14.5px;font-weight:500;color:var(--ink);padding:6px 0;position:relative;white-space:nowrap}
+nav.main a.active{color:var(--crimson)}
+nav.main a.active::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--crimson)}
+nav.main a:hover{color:var(--crimson)}
+.menu-btn{display:none;background:none;border:1px solid var(--line-strong);border-radius:4px;padding:8px 14px;font-family:var(--sans);font-size:14px;font-weight:600;cursor:pointer;color:var(--navy)}
+
+.page-intro{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+.page-intro h1{font-size:clamp(38px,5vw,62px);margin:14px 0 0;letter-spacing:-.01em}
+.page-intro .lead{color:#3a4453;font-size:18.5px;max-width:42em;margin-top:18px}
+
+.catalogue{padding:40px 0 84px}
+.filters{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-end;padding:26px;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+.filters label{display:flex;flex-direction:column;gap:7px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.filters .search-field{flex:1 1 280px}
+.filters input,.filters select{font-family:var(--sans);font-size:15px;color:var(--ink);background:#fff;border:1px solid var(--line-strong);border-radius:4px;padding:11px 12px}
+.filters input:focus,.filters select:focus{outline:none;border-color:var(--navy)}
+.btn-reset{background:#fff;color:var(--navy);border:1px solid var(--line-strong);border-radius:4px;padding:11px 18px;font-family:var(--sans);font-weight:600;font-size:14px;cursor:pointer;height:44px}
+.btn-reset:hover{border-color:var(--navy)}
+
+.filter-count{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin:26px 2px 10px;color:var(--muted);font-size:14px}
+.filter-count b{color:var(--navy);font-family:var(--serif);font-size:17px}
+
+.pub-list{margin-top:8px}
+.pub-row{border-top:1px solid var(--line);padding:24px 0;display:grid;grid-template-columns:92px 1fr;gap:26px;align-items:start}
+.pub-row:last-child{border-bottom:1px solid var(--line)}
+.pub-year{font-family:var(--serif);font-size:26px;color:var(--navy)}
+.pub-meta{font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:8px}
+.pub-body h3{font-size:19px;line-height:1.3;font-weight:600}
+.pub-detail{margin-top:12px}
+.pub-detail summary{cursor:pointer;font-size:13.5px;font-weight:600;color:var(--crimson);width:fit-content;list-style:none}
+.pub-detail summary::-webkit-details-marker{display:none}
+.pub-detail summary::before{content:"+ ";font-weight:700}
+.pub-detail[open] summary::before{content:"– "}
+.pub-detail summary:hover{text-decoration:underline}
+.citation{color:#2c3542;font-size:15px;line-height:1.55;margin:12px 0 0;padding:14px 16px;background:var(--surface);border-left:2px solid var(--line-strong);border-radius:0 4px 4px 0;word-break:break-word}
+.pub-actions{margin-top:12px}
+.pub-actions a{font-size:13.5px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line-strong);padding-bottom:2px}
+.pub-actions a:hover{color:var(--crimson);border-color:var(--crimson)}
+.empty{padding:40px 2px;color:var(--muted);font-size:16px}
+
+.note{color:var(--muted);font-size:13px;margin-top:40px;border-top:1px solid var(--line);padding-top:20px}
+
+footer.site{background:var(--navy);color:#cdd5e1;padding:52px 0 40px;margin-top:0}
+.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+.foot .fb{font-family:var(--serif);color:#fff;font-size:20px}
+.foot .fs{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8ea0bb;margin-bottom:6px}
+.foot nav{display:flex;flex-wrap:wrap;gap:22px}
+.foot nav a{color:#cdd5e1;text-decoration:none;font-size:14px;border-bottom:1px solid transparent}
+.foot nav a:hover{color:#fff;border-color:#4d6286}
+.foot .copy{color:#7e90ad;font-size:13px;margin-top:30px;border-top:1px solid #26385a;padding-top:22px;width:100%}
+
+@media (max-width:900px){
+nav.main{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:0;padding:8px 28px 18px;box-shadow:0 20px 40px -30px rgba(0,0,0,.4)}
+nav.main.open{display:flex}
+nav.main a{width:100%;padding:12px 0;border-bottom:1px solid var(--line)}
+nav.main a.active::after{display:none}
+.menu-btn{display:inline-block}
+header.site .bar{position:relative}
+.pub-row{grid-template-columns:60px 1fr;gap:6px 16px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+<div class="bar">
+<a class="brand" href="index.html" aria-label="Home">
+<span class="mono">FA</span>
+<span>
+<span class="bname">Felix-Constantin Adochiei</span><br>
+<span class="btag">Research &amp; academic profile</span>
+</span>
+</a>
+<button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav class="main" id="nav" aria-label="Main navigation">
+<a href="index.html">Overview</a>
+<a href="index.html#research">Research</a>
+<a href="publications.html" class="active" aria-current="page">Publications</a>
+<a href="index.html#teaching">Teaching</a>
+<a href="index.html#about">About</a>
+<a href="index.html#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<main id="main">
+<section class="page-intro">
+<div class="wrap">
+<p class="eyebrow">Publications &amp; contributions</p>
+<h1>Publications</h1>
+<p class="lead">Journal articles, conference papers and books. Search by title, author or topic, and filter by year or category.</p>
+</div>
+</section>
+
+<section class="catalogue">
+<div class="wrap">
+<form class="filters" id="filters" autocomplete="off">
+<label class="search-field">Search the catalogue
+<input type="search" id="q" placeholder="For example: EEG, IoMT, navigation, monitoring" aria-label="Search publications" />
+</label>
+<label>Year
+<select id="fy">
+<option value="">All years</option>
+<option>2026</option>
+<option>2025</option>
+<option>2024</option>
+<option>2023</option>
+<option>2022</option>
+<option>2021</option>
+<option>2020</option>
+<option>2019</option>
+<option>2018</option>
+<option>2017</option>
+<option>2016</option>
+<option>2015</option>
+<option>2014</option>
+<option>2013</option>
+<option>2012</option>
+<option>2011</option>
+<option>2010</option>
+<option>2009</option>
+<option value="undated">Year not specified</option>
+</select>
+</label>
+<label>Category
+<select id="ft">
+<option value="">All categories</option>
+<option>Journal articles</option>
+<option>Conference papers</option>
+<option>Books &amp; teaching materials</option>
+</select>
+</label>
+<button type="button" class="btn-reset" id="reset">Reset</button>
+</form>
+
+<div class="filter-count">
+<span><b id="count">122</b> publications</span>
+</div>
+
+<div class="pub-list" id="list">
+<article class="pub-row" data-year="2026" data-type="Journal articles">
+<div class="pub-year">2026</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>Computational Analysis of EEG Responses to Anxiogenic Stimuli Using Machine Learning Algorithms</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">F. C. Adochiei, A. Ioniță, I. R. Adochiei, O. I. Stirbu, G. Petroiu, and F. C. Argatu, &quot;Computational Analysis of EEG Responses to Anxiogenic Stimuli Using Machine Learning Algorithms,&quot; Applied Sciences, ISSN/eISSN 2076-3417, 2026, vol. 16, no. 3, Art. no. 1504, DOI 10.3390/app16031504, WOS:001688744100001.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.3390/app16031504" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2026" data-type="Journal articles">
+<div class="pub-year">2026</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>Depression Detection from Three-Channel Resting-State EEG Using a Hybrid Conv1D and Spectral–Statistical Fusion Model</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">O. I. Știrbu, F. C. Argatu, F. C. Adochiei, B. A. Enache, and G. C. Serițan, &quot;Depression Detection from Three-Channel Resting-State EEG Using a Hybrid Conv1D and Spectral–Statistical Fusion Model,&quot; Sensors, ISSN/eISSN 1424-8220, 2026, vol. 26, no. 5, Art. no. 1417, DOI 10.3390/s26051417, WOS:001713892500001.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.3390/s26051417" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2026" data-type="Journal articles">
+<div class="pub-year">2026</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>Deception Detection from Five-Channel Wearable EEG on LieWaves: A Reproducible Baseline for Subject-Dependent and Subject-Independent Evaluation</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Ș. T. Nicolescu, F. C. Adochiei, F. C. Argatu, B. A. Enache, and G. C. Serițan, &quot;Deception Detection from Five-Channel Wearable EEG on LieWaves: A Reproducible Baseline for Subject-Dependent and Subject-Independent Evaluation,&quot; Sensors, ISSN/eISSN 1424-8220, 2026, vol. 26, no. 3, Art. no. 1027, DOI 10.3390/s26031027, WOS:001688031800001.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.3390/s26031027" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2025" data-type="Journal articles">
+<div class="pub-year">2025</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>HL7 FHIR-Based Open-Source Framework for Real-Time Biomedical Signal Acquisition and IoMT Interoperability</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">F. C. Adochiei, F. A. Țoi, I. R. Adochiei, F. C. Argatu, G. Serițan, and G. G. Petroiu, &quot;HL7 FHIR-Based Open-Source Framework for Real-Time Biomedical Signal Acquisition and IoMT Interoperability,&quot; Applied Sciences, ISSN/eISSN 2076-3417, 2025, vol. 15, no. 23, Art. no. 12803, DOI 10.3390/app152312803, WOS:001633986400001.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.3390/app152312803" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2025" data-type="Journal articles">
+<div class="pub-year">2025</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>Design And Implementation Of A Cost-Effective, Functional Electrical Stimulation Device For Foot Drop Rehabilitation</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Oana Andreea Chiriac, Felix Constantin Adochiei, Nicoleta-Iuliana Trocan, Mircea Iulian Nistor, &quot;Design And Implementation Of A Cost-Effective, Functional Electrical Stimulation Device For Foot Drop Rehabilitation&quot;, Revue Roumaine Des Sciences Techniques-Serie Electrotechnique Et Energetique, ISSN/eISSN 0035-4066 / 2344-9294, 2025, Volumul 70, Numărul 1, pagini 151-156, DOI 10.59277/RRST-EE.2025.1.26, WOS:001459703700026.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.59277/RRST-EE.2025.1.26" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2025" data-type="Conference papers">
+<div class="pub-year">2025</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Brain–Computer Interface-Enabled Decision Support for Human Behavior Monitoring in Safety-Critical Contexts</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">O.-I. Știrbu, I.-R. Adochiei, Ș.-T. Nicolescu, C. K. Banica, G.-C. Serițan, and F.-C. Adochiei, &quot;Brain–Computer Interface-Enabled Decision Support for Human Behavior Monitoring in Safety-Critical Contexts,&quot; 6th International Conference on Nanotechnologies and Biomedical Engineering (ICNBME 2025), Chisinau, Moldova, 2025, pagini 519–528, DOI https://doi.org/10.1007/978-3-032-06494-3_52 , WOS:001596034500052.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1007/978-3-032-06494-3_52" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2025" data-type="Conference papers">
+<div class="pub-year">2025</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Embedded Power Management and State-of-Charge Estimation in Modular Robotic Platforms: Experimental Validation and Web-Based Monitoring</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">F. C. Argatu, I.-R. Adochiei, B.-A. Enache, C. K. Banica, G.-C. Serițan, and F.-C. Adochiei, &quot;Embedded Power Management and State-of-Charge Estimation in Modular Robotic Platforms: Experimental Validation and Web-Based Monitoring,&quot; 6th International Conference on Nanotechnologies and Biomedical Engineering (ICNBME 2025), Chisinau, Moldova, 2025, pagini 635–644, DOI https://doi.org/10.1007/978-3-032-06497-4_62 , WOS:001596032600076.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1007/978-3-032-06497-4_62" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2025" data-type="Conference papers">
+<div class="pub-year">2025</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Modular Mobile Robotic Platform for Smart City and Indoor Service Applications</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Adochiei, I.R., Argatu, F.C., Enache, B.A., Banica, C.K., Grigorescu, S.D., Adochiei, F.C., &quot;Modular Mobile Robotic Platform for Smart City and Indoor Service Applications&quot;, 7th International Conference on Nanotechnologies and Biomedical Engineering (ICNBME 2025), Chisinau, Moldova, 2025, pagini 624–634, DOI https://doi.org/10.1007/978-3-032-06497-4_61 , WOS:001596032600075.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1007/978-3-032-06497-4_61" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2025" data-type="Conference papers">
+<div class="pub-year">2025</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Determining the Level of Attention Through the Processing of the Human Body&#x27;s Biosignals</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">F. Adochiei, R. V. Paraschiv, E. Crăciun, and O. Mateescu, &quot;Determining the Level of Attention Through the Processing of the Human Body&#x27;s Biosignals,&quot; The International Conference &quot;Education and Creativity for a Knowledge-Based Society&quot; - Computer Science, Bucuresti, Romania, 2025, paginile 124-130, DOI: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5117611 , ELSEVIER / SSRN.</p></details>
+<div class="pub-actions"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5117611" target="_blank" rel="noopener">Publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2025" data-type="Conference papers">
+<div class="pub-year">2025</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Determination of Concealed Behavior Through EEG Wave Processing</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Titi PARASCHIV, Cosmin Karl BĂNICĂ, Felix ADOCHIEI, Ruxandra Victoria PARASCHIV, Luiza BĂNICĂ, Andrei IGNAT, &quot;Determination of Concealed Behavior Through EEG Wave Processing,&quot; The International Conference &quot;Education and Creativity for a Knowledge-Based Society&quot; - Computer Science, Bucuresti, Romania, 2025, pagini 105-111, DOI: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5117611 , ELSEVIER / SSRN.</p></details>
+<div class="pub-actions"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5117611" target="_blank" rel="noopener">Publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2025" data-type="Conference papers">
+<div class="pub-year">2025</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Integrated System for Interconnecting Medical Equipment and Secure Data Transmission to a Remote Monitoring Platform</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">F.-C. Adochiei, F. A. Țoi, F. Argatu, G. Serițan, and I. Adochiei, &quot;Integrated System for Interconnecting Medical Equipment and Secure Data Transmission to a Remote Monitoring Platform,&quot; 2025 14th International Symposium on Advanced Topics in Electrical Engineering (ATEE), 09-11 October 2025, Bucharest, Romania, 2025, pagini 1–6, DOI: 10.1109/ATEE66006.2025.11299916, IEEE.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ATEE66006.2025.11299916" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2025" data-type="Conference papers">
+<div class="pub-year">2025</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Real-Time Environmental Parameter Monitoring and Temperature Forecasting Using a Custom IoT Weather Station and Linear Regression</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">C. A. Niculescu, F. C. Argatu, G. C. Serițan, F. C. Adochiei, and B. A. Enache, &quot;Real-Time Environmental Parameter Monitoring and Temperature Forecasting Using a Custom IoT Weather Station and Linear Regression,&quot; 2025 14th International Symposium on Advanced Topics in Electrical Engineering (ATEE), 09-11 October 2025, Bucharest, Romania, 2025, pagini 1–5, DOI: 10.1109/ATEE66006.2025.11299969, IEEE.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ATEE66006.2025.11299969" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2025" data-type="Conference papers">
+<div class="pub-year">2025</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Performance Evaluation of Wavelet and Adaptive Filters for ECG Denoising in the LabVIEW Environment</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">A. Nistor, G.-C. Serițan, F. C. Adochiei, F.-C. Argatu, and B.-A. Enache, &quot;Performance Evaluation of Wavelet and Adaptive Filters for ECG Denoising in the LabVIEW Environment,&quot; 2025 14th International Symposium on Advanced Topics in Electrical Engineering (ATEE), 09-11 October 2025, Bucharest, Romania, 2025, pagini 1-5, DOI: 10.1109/ATEE66006.2025.11299944, IEEE.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ATEE66006.2025.11299944" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2025" data-type="Conference papers">
+<div class="pub-year">2025</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Energy-Aware A* Path Planning for Indoor Automated Guided Vehicles</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">B.-A. Enache, S.-D. Grigorescu, F. C. Adochiei, F. C. Argatu, G. C. Seritan, and C. K. Banica, &quot;Energy-Aware A* Path Planning for Indoor Automated Guided Vehicles,&quot; 2025 14th International Symposium on Advanced Topics in Electrical Engineering (ATEE), 09-11 October 2025, Bucharest, Romania, 2025, pagini 1-6, DOI: 10.1109/ATEE66006.2025.11299871, IEEE.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ATEE66006.2025.11299871" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2024" data-type="Journal articles">
+<div class="pub-year">2024</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>The Power of Play: Strategies for Enhancing Development in Children with Autism Spectrum Disorders</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Felix-Constantin Adochiei, Simona-Narcisa Arghir, Ioana Raluca Adochiei, Florin Ciprian Argatu, George Calin Seritan, Bogdan Alexandrescu, &quot;The Power of Play: Strategies for Enhancing Development in Children with Autism Spectrum Disorders&quot;, Sensors, ISSN/eISSN 1424-8220, 2024, Vol 24, Numarul 20, Art. no. 6720, DOI https://doi.org/10.3390/s24206720 , WOS:001341613300001</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.3390/s24206720" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2024" data-type="Journal articles">
+<div class="pub-year">2024</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>Reengineering Indoor Air Quality Monitoring Systems to Improve End-User Experience</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Radu Nicolae Pietraru, Adriana Olteanu, Ioana-Raluca Adochiei, Felix-Constantin Adochiei, &quot;Reengineering Indoor Air Quality Monitoring Systems to Improve End-User Experience&quot;, Sensors, ISSN/eISSN 1424-8220, 2024, Volumul 24, Numărul 8, Art. No. 2659, DOI 10.3390/s24082659, WOS:001220198700001.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.3390/s24082659" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2024" data-type="Conference papers">
+<div class="pub-year">2024</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>IoT-Based Real-Time Electrocardiogram Monitoring and Recording System</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Felix-Constantin Adochiei, David-Andrei Dumitrescu, George Calin Seritan, Florin Ciprian Argatu, Bogdan-Adrian Enache, Ioana-Raluca Adochiei, &quot;IoT-Based Real-Time Electrocardiogram Monitoring and Recording System&quot;, 2024 E-Health and Bioengineering Conference (EHB), Iasi, Romania, 2024, pagini 1-5, DOI: 10.1109/EHB64556.2024.10805722, WOS:001413708800104.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB64556.2024.10805722" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2024" data-type="Conference papers">
+<div class="pub-year">2024</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Determination of Cognitive-Emotional Characteristics through the Method of Individual Asymmetries of Power Spectral Density of EEG Waves</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Felix-Constantin Adochiei, Titi Paraschiv, Daniel Cochior, Ruxandra Paraschiv, Oana Izabela Stirbu, Florin Ciprian Argatu, Ioana-Raluca Adochiei, &quot;Determination of Cognitive-Emotional Characteristics through the Method of Individual Asymmetries of Power Spectral Density of EEG Waves&quot;, 2023 International Symposium on Fundamentals of Electrical Engineering (ISFEE), Bucharest, Romania, 2024, pagini 1-4, DOI: 10.1109/ISFEE60884.2023.10637003, WOS:001324614500008.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ISFEE60884.2023.10637003" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2024" data-type="Conference papers">
+<div class="pub-year">2024</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>AI Algorithm for Assessing Levels of Dissimulation Through EEG and Physiological Data Analysis</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">O.-I. Știrbu, Ș. T. Nicolescu, I. R. Adochiei, C. K. Banica, D. A. Dolhascu, and F.-C. Adochiei, &quot;AI Algorithm for Assessing Levels of Dissimulation Through EEG and Physiological Data Analysis,&quot; 2024 E-Health and Bioengineering Conference (EHB), Iasi, Romania, 2024, pagini 1–4, DOI: 10.1109/EHB64556.2024.10805675, WOS:001413708800102.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB64556.2024.10805675" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2024" data-type="Conference papers">
+<div class="pub-year">2024</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Intraocular Pressure Determining System Based on Rebound Tonometry</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">I.-R. Adochiei, M. Popescu, F. C. Argatu, G. Petroiu, and F.-C. Adochiei, &quot;Intraocular Pressure Determining System Based on Rebound Tonometry,&quot; 2024 E-Health and Bioengineering Conference (EHB), Iasi, Romania, 2024, pagini 1–5, DOI: 10.1109/EHB64556.2024.10805608, WOS:001413708800103.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB64556.2024.10805608" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2024" data-type="Conference papers">
+<div class="pub-year">2024</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Exploring Emotions: Play-Based Interventions for Children with Autism Spectrum Disorders</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">S. N. Arghir, I. R. Adochiei, G. Petroiu, O.-I. Stirbu, F. C. Argatu, and F.-C. Adochiei, &quot;Exploring Emotions: Play-Based Interventions for Children with Autism Spectrum Disorders,&quot; Advances in Digital Health and Medical Bioengineering (EHB 2023), Bucuresti, Romania, 2024, pagini 68–77, DOI https://doi.org/10.1007/978-3-031-62523-7_8 , WOS:001434998400008.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1007/978-3-031-62523-7_8" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2024" data-type="Conference papers">
+<div class="pub-year">2024</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Solutions to Reduce Electromagnetic Interference Inside Anesthesia and Intensive Care Units</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">M.-G. Roman, I.-R. Adochiei, and F.-C. Adochiei, &quot;Solutions to Reduce Electromagnetic Interference Inside Anesthesia and Intensive Care Units,&quot; Advances in Digital Health and Medical Bioengineering (EHB 2023), Bucuresti, Romania, 2024, pagini 367–374, DOI: 10.1007/978-3-031-48025-6_36, WOS:001326807700043.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1007/978-3-031-48025-6_36" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2024" data-type="Conference papers">
+<div class="pub-year">2024</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Exploring EEG Patterns as Indicators of Stress: A Comprehensive Study</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">I.-R. Adochiei, R. Paraschiv, G. Petroiu, A. Sultana, Ș. Duță, and F.-C. Adochiei, &quot;Exploring EEG Patterns as Indicators of Stress: A Comprehensive Study,&quot; Advances in Digital Health and Medical Bioengineering (EHB 2023), Bucuresti, Romania, 2024, pp. 358–369, DOI: 10.1007/978-3-031-48025-6_35, WOS:001326809000040.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1007/978-3-031-48025-6_35" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2024" data-type="Conference papers">
+<div class="pub-year">2024</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Enhancing Super-Resolution Microscopy Through a Synergistic Approach with Generative Machine Learning Models</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">R. Ciucu, I. R. Adochiei, F. C. Argatu, Ș. T. Nicolescu, G. Petroiu, and F.-C. Adochiei, &quot;Enhancing Super-Resolution Microscopy Through a Synergistic Approach with Generative Machine Learning Models,&quot; Advances in Digital Health and Medical Bioengineering (EHB 2023), Bucuresti, Romania, 2024, pp. 313–323, DOI: 10.1007/978-3-031-48025-6_31, WOS:001326809000036.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1007/978-3-031-48025-6_31" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2024" data-type="Conference papers">
+<div class="pub-year">2024</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Intelligent Monitoring System for Stress Levels</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">A. Manea, F. C. Argatu, G. C. Serițan, B. A. Enache, I. R. Adochiei, and F. C. Adochiei, &quot;Intelligent Monitoring System for Stress Levels,&quot; Advances in Digital Health and Medical Bioengineering (EHB 2023), Bucuresti, Romania, 2024, pp. 59–67, DOI https://doi.org/10.1007/978-3-031-62523-7_7 , WOS:001434998400007.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1007/978-3-031-62523-7_7" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2024" data-type="Conference papers">
+<div class="pub-year">2024</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Automated Assessment of Hospital Waste Bin Fill Ratios: A Novel AI-Driven Approach for Enhanced Waste Management and Infection Control</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">I. Manea, Ș. Duță, L. E. Radu, and F. C. Adochiei, &quot;Automated Assessment of Hospital Waste Bin Fill Ratios: A Novel AI-Driven Approach for Enhanced Waste Management and Infection Control,&quot; Advances in Digital Health and Medical Bioengineering (EHB 2023), Bucuresti, Romania, 2024, pp. 43–50, DOI https://doi.org/10.1007/978-3-031-62523-7_5 , WOS:001434998400005.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1007/978-3-031-62523-7_5" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2024" data-type="Conference papers">
+<div class="pub-year">2024</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Validation of the Anxiety Assessment Method Employing the g.TEC Unicorn Hybrid Black Alongside Psychological Testing</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">T. Paraschiv, C. K. Banica, R. Paraschiv, Ș. T. Nicolescu, A. Ignat, and F.-C. Adochiei, &quot;Validation of the Anxiety Assessment Method Employing the g.TEC Unicorn Hybrid Black Alongside Psychological Testing,&quot; Advances in Digital Health and Medical Bioengineering (EHB 2023), Bucuresti, Romania, 2024, p. 324–335, DOI https://doi.org/10.1007/978-3-031-62520-6_37 , WOS:001326809000037.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1007/978-3-031-62520-6_37" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2024" data-type="Conference papers">
+<div class="pub-year">2024</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Towards Improved Assistive Inertial Positioning Solutions by Using Finely Tuned Wavelet Functions</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">I.-R. Adochiei, T. L. Grigorie, F.-C. Adochiei, P. Negrea, V. Cristian, and N. Jula, &quot;Towards Improved Assistive Inertial Positioning Solutions by Using Finely Tuned Wavelet Functions,&quot; 6th International Conference on Nanotechnologies and Biomedical Engineering (ICNBME 2023), Cham, Switzerland / Chișinău, Moldova, 2024, pagini 597–606, DOI: 10.1007/978-3-031-44502-6_75, Springer / Scopus.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1007/978-3-031-44502-6_75" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2024" data-type="Conference papers">
+<div class="pub-year">2024</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Assisting Deaf and Hard-of-Hearing People in Critical Situations: Alleviating Stress and Enhancing Safety</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">O.-I. Știrbu, I.-R. Adochiei, R.-V. Paraschiv, Ș.-T. Nicolescu, F.-C. Adochiei, and G.-C. Serițan, &quot;Assisting Deaf and Hard-of-Hearing People in Critical Situations: Alleviating Stress and Enhancing Safety,&quot; 6th International Conference on Nanotechnologies and Biomedical Engineering (ICNBME 2023), Cham, Switzerland / Chișinău, Moldova, 2024, pagini 50–58, DOI: 10.1007/978-3-031-44502-6_7, Springer / Scopus.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1007/978-3-031-44502-6_7" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2024" data-type="Conference papers">
+<div class="pub-year">2024</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Advancing Tennis Training with an Intelligent Robotic Assistant</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">A. Sonea, I.-R. Adochiei, N. Goga, F.-C. Adochiei, C. Taslitchi, T. Lupoiu, and R. Popa, &quot;Advancing Tennis Training with an Intelligent Robotic Assistant,&quot; 2024 IEEE SmartBlock4Africa, 30 September 2024 - 04 October 2024, 2024, pagini 1–5, DOI: 10.1109/SmartBlock4Africa61928.2024.10779499, IEEE.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/SmartBlock4Africa61928.2024.10779499" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2023" data-type="Journal articles">
+<div class="pub-year">2023</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>Indoor 3d Scanning And Navigation System For An Automated Guided Vehicle</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Sorin-Dan Grigorescu, George-Calin Seritan, Bogdan-Adrian Enache, Florin-Ciprian Argatu, Felix-Constantin Adochiei, Victor Stanciu, &quot;Indoor 3d Scanning And Navigation System For An Automated Guided Vehicle&quot;, Revue Roumaine Des Sciences Techniques—Série Électrotechnique Et Énergétique, ISSN/eISSN 0035-4066 / 2344-9294, 2023, Volumul 68, Numărul 2, pagini 232-235, DOI https://doi.org/10.59277/RRST-EE.2023.68.2.19 , WOS:001026628400019.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.59277/RRST-EE.2023.68.2.19" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2023" data-type="Conference papers">
+<div class="pub-year">2023</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>An Algorithm for Quantifying Anxiety, Stress, and Attention: Towards Objective Assessment of Mental States</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">R. V. Paraschiv, T. Paraschiv, C. K. Bănică, A. Ignat, O. Știrbu, and F. Adochiei, &quot;An Algorithm for Quantifying Anxiety, Stress, and Attention: Towards Objective Assessment of Mental States,&quot; 2023 13th International Symposium on Advanced Topics in Electrical Engineering (ATEE), Bucharest, Romania, 2023, pagini 1–4, DOI: 10.1109/ATEE58038.2023.10108248, IEEE.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ATEE58038.2023.10108248" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2023" data-type="Conference papers">
+<div class="pub-year">2023</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Human Behavior, Recognition, and Interpretation System Using Physiological Signals</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">I.-R. Adochiei, O. Știrbu, Ș. T. Nicolescu, R. V. Paraschiv, C. K. Bănică, and F.-C. Adochiei, &quot;Human Behavior, Recognition, and Interpretation System Using Physiological Signals,&quot; 2023 13th International Symposium on Advanced Topics in Electrical Engineering (ATEE), Bucharest, Romania, 2023, pagini 1–4, DOI: 10.1109/ATEE58038.2023.10108220, IEEE.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ATEE58038.2023.10108220" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2023" data-type="Conference papers">
+<div class="pub-year">2023</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Comfort vs Health: A Winter Snapshot of Indoor Air Quality During the Energy Crisis</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">R. N. Pietraru, F.-C. Adochiei, I. M. Costea, and C. K. Bănică, &quot;Comfort vs Health: A Winter Snapshot of Indoor Air Quality During the Energy Crisis,&quot; in 2023 13th International Symposium on Advanced Topics in Electrical Engineering (ATEE), Bucharest, Romania, anul 2023, pagini 1–5, DOI: 10.1109/ATEE58038.2023.10108245, Baza de date IEEE</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ATEE58038.2023.10108245" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2023" data-type="Conference papers">
+<div class="pub-year">2023</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>A Study on Cognitive and Emotional Processes Carried Out Through EEG Wave Processing</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">T. Paraschiv, D. Cochior, I.-R. Adochiei, R. V. Paraschiv, C. K. Bănică, and F.-C. Adochiei, &quot;A Study on Cognitive and Emotional Processes Carried Out Through EEG Wave Processing,&quot; 2023 13th International Symposium on Advanced Topics in Electrical Engineering (ATEE), Bucharest, Romania, 2023, pagini 1–6, DOI: 10.1109/ATEE58038.2023.10108206, IEEE.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ATEE58038.2023.10108206" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2023" data-type="Conference papers">
+<div class="pub-year">2023</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Winter in Europe 2022–2023-Concerns About The Effects of The Energy Crisis On Indoor Environmental Quality and Public Health</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Radu Nicolae Pietraru, Felix-Constantin Adochiei, Ilona Mădălina Costea, &quot;Winter in Europe 2022–2023-Concerns About The Effects of The Energy Crisis On Indoor Environmental Quality and Public Health&quot;, 2022 E-Health and Bioengineering Conference (EHB), Iasi, Romania, 2022, pagini 1-4, DOI: 10.1109/EHB55594.2022.9991418, IEEE.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB55594.2022.9991418" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2023" data-type="Conference papers">
+<div class="pub-year">2023</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Study on the Determination of Sustained Attention Through EEG Wave Processing</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Titi PARASCHIV, Felix ADOCHIEI, Andrei IGNAT, Daniel AVRAM, Narcis ADOCHIEI, Ionuț MANEA, &quot;Study on the Determination of Sustained Attention Through EEG Wave Processing&quot;, The International Conference &quot;Education and Creativity for a Knowledge-Based Society&quot; - Psychology - XVIth Edition, Bucuresti, Romania, 2023, pagini 107-113, DOI / hyperlink: https://ssrn.com/abstract=4403203, ELSEVIER / SSRN.</p></details>
+<div class="pub-actions"><a href="https://ssrn.com/abstract=4403203" target="_blank" rel="noopener">Publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2023" data-type="Conference papers">
+<div class="pub-year">2023</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Studying Emotions Using EEG Waves to Determine Facial Expressions</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Felix ADOCHIEI, Titi PARASCHIV, Cosmin Karl BĂNICĂ, Ruxandra Victoria PARASCHIV, Ioana ADOCHIEI, Mihai TUTOVEANU, &quot;Studying Emotions Using EEG Waves to Determine Facial Expressions&quot;, The International Conference &quot;Education and Creativity for a Knowledge-Based Society&quot; - Psychology - XVIth Edition, Bucuresti, Romania, 2023, pagini 107-113, DOI / hyperlink: https://ssrn.com/abstract=4403203, ELSEVIER / SSRN.</p></details>
+<div class="pub-actions"><a href="https://ssrn.com/abstract=4403203" target="_blank" rel="noopener">Publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2023" data-type="Conference papers">
+<div class="pub-year">2023</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Study of EEG Asymmetry and Psychophysiological Significance</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Ruxandra Victoria PARASCHIV, Cosmin Karl BĂNICĂ, Felix ADOCHIEI, Laura DOROBANȚU, Student Daniel AVRAM, &quot;Study of EEG Asymmetry and Psychophysiological Significance&quot;, The International Conference &quot;Education and Creativity for a Knowledge-Based Society&quot; - Psychology - XVIth Edition, Bucuresti, Romania, 2023, pagini 107-113, DOI / hyperlink: https://ssrn.com/abstract=4403203, ELSEVIER / SSRN.</p></details>
+<div class="pub-actions"><a href="https://ssrn.com/abstract=4403203" target="_blank" rel="noopener">Publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2022" data-type="Conference papers">
+<div class="pub-year">2022</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>A Multipurpose Video Immersion Laboratory</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Sorin Dan Grigorescu, George-Calin Seritan, Bogdan-Adrian Enache, Felix-Constantin Adochiei, Florin-Ciprian Argatu, Irina Vilciu, Teodor-Iulian Voicila, &quot;A Multipurpose Video Immersion Laboratory&quot;, 2022 E-Health and Bioengineering Conference (EHB), Iasi, Romania, 2022, pagini 1-4, DOI: 10.1109/EHB55594.2022.9991365, IEEE.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB55594.2022.9991365" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2022" data-type="Conference papers">
+<div class="pub-year">2022</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Radiological Diagnosis of SARS-CoV-2 Infected Patients by Automated Classification of Chest Radiographs using DTL</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Oana-Isabela Ştirbu, Serban Teodor Nicolescu, George Calin Seritan, Ioana Raluca Adochiei, Gladiola Petroiu, Florin Argatu, Felix-Constantin Adochiei, &quot;Radiological Diagnosis of SARS-CoV-2 Infected Patients by Automated Classification of Chest Radiographs using DTL&quot;, 2022 E-Health and Bioengineering Conference (EHB), Iasi, Romania, 2022, pagini 1-4, DOI: 10.1109/EHB55594.2022.9991502, IEEE.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB55594.2022.9991502" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2022" data-type="Conference papers">
+<div class="pub-year">2022</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Intelligent System for Automatic Assessment and Interpretation of Disguised Behaviour for Critical Infrastructure Personnel</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Felix-Constantin Adochiei, Cosmin Karl Bănică, Ioana Raluca Adochiei, Oana-Isabela Ştirbu, Serban Teodor Nicolescu, Laura Elena Dorobantu, Costin Cepisca, &quot;Intelligent System for Automatic Assessment and Interpretation of Disguised Behaviour for Critical Infrastructure Personnel&quot;, 2022 E-Health and Bioengineering Conference (EHB), Iasi, Romania, 2022, pagini 1-4, DOI: 10.1109/EHB55594.2022.9991710, IEEE.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB55594.2022.9991710" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2022" data-type="Conference papers">
+<div class="pub-year">2022</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Method of Determining The Anxiety Level through EEG Wave Processing</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Titi Paraschiv, Cosmin Karl Bănică, Ruxandra Paraschiv, Catalin Ştefan, Andrei Ignat, Felix–Constantin Adochiei, &quot;Method of Determining The Anxiety Level through EEG Wave Processing&quot;, 2022 E-Health and Bioengineering Conference (EHB), Iasi, Romania, 2022, pagini 1-4, DOI: 10.1109/EHB55594.2022.9991739, IEEE.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB55594.2022.9991739" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2022" data-type="Conference papers">
+<div class="pub-year">2022</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>The Localization of the Epileptogenic Zone from the Interictal Electroencephalogram</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Laura Elena Dorobanţu, Cosmin Karl Bănică, Florin Ciprian Argatu, Titi Paraschiv, Ruxandra Victoria Paraschiv, Felix Constantin Adochiei, &quot;The Localization of the Epileptogenic Zone from the Interictal Electroencephalogram&quot;, 2022 E-Health and Bioengineering Conference (EHB), Iasi, Romania, 2022, pagini 1-4, DOI: 10.1109/EHB55594.2022.9991431, IEEE.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB55594.2022.9991431" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2022" data-type="Conference papers">
+<div class="pub-year">2022</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Method for Diagnosing The Level of Depression Compared with The Classical Method</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Felix-Constantin Adochiei, Titi Paraschiv, Ioana Raluca Adochiei, Cosmin Karl Bănică, Ruxandra Paraschiv, Narcis Adochiei, Daniel Vasile Avramr, &quot;Method for Diagnosing The Level of Depression Compared with The Classical Method&quot;, 2022 E-Health and Bioengineering Conference (EHB), Iasi, Romania, 2022, pagini 1-4, DOI: 10.1109/EHB55594.2022.9991714, IEEE.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB55594.2022.9991714" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2022" data-type="Conference papers">
+<div class="pub-year">2022</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Energy Evaluation of Bugs vs Birds Path Planning Strategies for Robots</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Bogdan-Adrian Enache, Sorin-Dan Grigorescu, Florin-Ciprian Argatu, Felix-Constantin Adochiei, Irina Vilciu, Teodor-Iulian Voicila, &quot;Energy Evaluation of Bugs vs Birds Path Planning Strategies for Robots&quot;, 2022 14th International Conference on Electronics, Computers and Artificial Intelligence (ECAI), Ploiesti, Romania, 2022, pagini 1-4, DOI: 10.1109/ECAI54874.2022.9847441, IEEE.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ECAI54874.2022.9847441" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2021" data-type="Conference papers">
+<div class="pub-year">2021</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Air Quality Monitoring and Control System for a Hospital Room</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Fetcu David Andrei, SERITAN GEORGE-CALIN, ENACHE Bogdan-Adrian, ARGATU Florin Ciprian, ADOCHIEI Felix Constantin, &quot;Air Quality Monitoring and Control System for a Hospital Room&quot;, 2021 International Conference on e-Health and Bioengineering (EHB), Iasi, Romania, 2021, pagini 1-4, DOI: 10.1109/EHB52898.2021.9657663, WOS:000802227900123.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB52898.2021.9657663" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2021" data-type="Conference papers">
+<div class="pub-year">2021</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Flyback Converter for a Multi-Chemistry Battery Balancer</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">ENACHE Bogdan-Adrian, SERITAN GEORGE-CALIN, HORIA ANDREI COSTIN CEPISCA, CEPISCA Costin, GRIGORESCU Sorin Dan, ARGATU Florin Ciprian, ADOCHIEI Felix Constantin, VOICILA Iulian-Teodor, &quot;Flyback Converter for a Multi-Chemistry Battery Balancer&quot;, 2021 12th International Symposium on Advanced Topics in Electrical Engineering (ATEE), Bucharest, Romania, 2021, pagini 1-6, DOI: 10.1109/ATEE52255.2021.9425205, WOS:000676164800086.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ATEE52255.2021.9425205" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2020" data-type="Journal articles">
+<div class="pub-year">2020</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>Comparative Study Of Screening Methods For Second Life Lifepo4 Batteries</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Bogdan-Adrian Enache, George-Calin Seritan, Costin Cepisca, Sorin-Dan Grigorescu, Florin-Ciprian Argatu, Felilx-Constantin Adochiei, Teodor Iulian Voicila, &quot;Comparative Study Of Screening Methods For Second Life Lifepo4 Batteries&quot;, Revue Roumaine Des Sciences Techniques-Serie Electrotechnique Et Energetique, ISSN/eISSN 0035-4066 / 2344-9294, 2020, Vol. 65, Numărul 1-2, pagini 71-74, DOI, WOS:000552052900012.</p></details>
+
+</div>
+</article>
+<article class="pub-row" data-year="2020" data-type="Journal articles">
+<div class="pub-year">2020</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>Performance evaluation of photovoltaic panels containing cells with different bus bars configurations in partial shading conditions</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">SERITAN GEORGE-CALIN, ENACHE Bogdan-Adrian, ADOCHIEI Felix Constantin, ARGATU Florin Ciprian, CHRISTODOULOU Christos A, Vasiliki Vita, TOMA Ana-Ruxandra, GANDESCU Costin-Hedwig, Francisc Ioan Hathazi, &quot;Performance evaluation of photovoltaic panels containing cells with different bus bars configurations in partial shading conditions&quot;, Rev. Roum. Sci. Tech.-Ser. Electrotech. Energetique, ISSN/eISSN 0035-4066 / 2344-9294, 2020, Volumul 65, Numărul, pagini 67-70, DOI, WOS:000552052900011.</p></details>
+
+</div>
+</article>
+<article class="pub-row" data-year="2020" data-type="Conference papers">
+<div class="pub-year">2020</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Electronic System for Real-Time Indoor Air Quality Monitoring</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">ADOCHIEI Felix Constantin, NICOLESCU Şerban-Teodor, Ioana-Raluca Adochiei, SERITAN GEORGE-CALIN, ENACHE Bogdan-Adrian, ARGATU Florin Ciprian, Diana Costinel, &quot;Electronic System for Real-Time Indoor Air Quality Monitoring&quot;, 2020 International Conference on e-Health and Bioengineering (EHB), Iasi, Romania, 2020, pagini 1-4, DOI: 10.1109/EHB50910.2020.9280192, WOS:000646194100066.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB50910.2020.9280192" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2020" data-type="Conference papers">
+<div class="pub-year">2020</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>The Influence of the Generator Signal Parameters Over the AntiBubbles Formation</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">ADOCHIEI Felix Constantin, SERITAN GEORGE-CALIN, ENACHE Bogdan-Adrian, ARGATU Florin Ciprian, Andreea Roxanda Dobre, &quot;The Influence of the Generator Signal Parameters Over the AntiBubbles Formation&quot;, 2020 International Symposium on Fundamentals of Electrical Engineering (ISFEE), Bucharest, Romania, 2020, pagini 1-4, DOI: 10.1109/ISFEE51261.2020.9756158, WOS:000812321500028.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ISFEE51261.2020.9756158" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2020" data-type="Conference papers">
+<div class="pub-year">2020</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Computing the Caloric Expenditure During Kick Scooter Activity</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">SERITAN GEORGE-CALIN, ENACHE Bogdan-Adrian, ADOCHIEI Felix Constantin, ARGATU Florin Ciprian, Andrei-Sebastian Petrescu, Ioana-Raluca Adochiei, Daniel Iulian Voiculescu, &quot;Computing the Caloric Expenditure During Kick Scooter Activity&quot;, 2020 International Conference on e-Health and Bioengineering (EHB), Iasi, Romania, 2020, pagini 1-4, DOI: 10.1109/EHB50910.2020.9280259, WOS:000646194100128.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB50910.2020.9280259" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2020" data-type="Conference papers">
+<div class="pub-year">2020</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Robotic Platform for Recovering Injured People in Smart Home</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">GRIGORESCU Sorin Dan, SERITAN GEORGE-CALIN, ENACHE Bogdan-Adrian, ADOCHIEI Felix Constantin, ARGATU Florin Ciprian, Andreea Stavre, &quot;Robotic Platform for Recovering Injured People in Smart Home&quot;, 2020 International Conference on e-Health and Bioengineering (EHB), Iasi, Romania, 2020, pagini 1-4, DOI: 10.1109/EHB50910.2020.9280273, WOS:000646194100141.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB50910.2020.9280273" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2020" data-type="Journal articles">
+<div class="pub-year">2020</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>Open Source Architecture for Iot Based SCADA System for Smart Home</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">GRIGORESCU Sorin Dan, SERITAN GEORGE-CALIN, ENACHE ALEXANDRU-DUMITRU-BOGDAN, ENACHE Bogdan-Adrian, ARGATU Florin Ciprian, ADOCHIEI Felix Constantin, &quot;Open Source Architecture for Iot Based SCADA System for Smart Home&quot;, Scientific Bulletin of the Electrical Engineering Faculty, ISSN 2286-2455, 2020, Year 20, No. 1 (42), pagini 33-36, DOI: 10.2478/SBEEF-2020-010, EBSCO https://reference-global.com/download/article/10.2478/sbeef-2020-0107.pdf</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.2478/SBEEF-2020-010" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2020" data-type="Conference papers">
+<div class="pub-year">2020</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>A Battery Screening System for Second Life LiFePO Batteries</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">ENACHE Bogdan-Adrian, SERITAN GEORGE-CALIN, GRIGORESCU Sorin Dan, CEPISCA Costin, ADOCHIEI Felix Constantin, Violeta Vasilica Argatu, VOICILA Iulian-Teodor, &quot;A Battery Screening System for Second Life LiFePO Batteries&quot;, 2020 International Conference and Exposition on Electrical And Power Engineering (EPE), Iasi, Romania, 2020, pagini 298-301, DOI: 10.1109/EPE50722.2020.9305538, IEEE.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EPE50722.2020.9305538" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2019" data-type="Conference papers">
+<div class="pub-year">2019</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Brain Mapping using a Blockchain Approach</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Felix-Constantin Adochiei, Radu Ciucu, Ioana Raluca Adochiei, Florin Ciprian Argatu, Bogdan Enache, Casian Miron, George Seritan, &quot;Brain Mapping using a Blockchain Approach&quot;, 2019 E-Health and Bioengineering Conference (EHB), Iasi, Romania, 2019, pagini 1-4, DOI: 10.1109/EHB47216.2019.8970089, WOS:000558648300217 .</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB47216.2019.8970089" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2019" data-type="Conference papers">
+<div class="pub-year">2019</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Remote Control for Smart Home Applications</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Felix-Constantin Adochiei, Razvan-Constantin Stefan, Ioana-Raluca Adochiei, Bogdan-Adrian Enache, Luminita-Mirela Constantinescu, Marius-Ciprian Larco, &quot;Remote Control for Smart Home Applications&quot;, 2019 11th International Conference on Electronics, Computers and Artificial Intelligence (ECAI), Pitesti, Romania, 2019, pagini 1-4, DOI: 10.1109/ECAI46879.2019.9042067, WOS:000569985400100 / https://ieeexplore.ieee.org/abstract/document/9042067</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ECAI46879.2019.9042067" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2019" data-type="Conference papers">
+<div class="pub-year">2019</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Design and Implementation of a Body Posture Detection System</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Felix-Constantin Adochiei, Ioana Raluca Adochiei, Radu Ciucu, Gladiola Pietroiu-Andruseac, Florin Ciprian Argatu, Nicolae Jula, &quot;Design and Implementation of a Body Posture Detection System&quot;, 2019 E-Health and Bioengineering Conference (EHB), Iasi, Romania, 2019, pagini 1-4, DOI: 10.1109/EHB47216.2019.8969997, WOS:000558648300129 / https://ieeexplore.ieee.org/abstract/document/8970089</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB47216.2019.8969997" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2019" data-type="Conference papers">
+<div class="pub-year">2019</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>A WEB Platform for Rendring and Viewing MRI Volumes using Real-Time Raytracing Principles</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">F. Adochiei, R. Ciucu, I. Adochiei, S. D. Grigorescu, G. Călin Serițan and M. Casian, &quot;A WEB Platform for Rendring and Viewing MRI Volumes using Real-Time Raytracing Principles,&quot; 2019 11th International Symposium on Advanced Topics in Electrical Engineering (ATEE), Bucharest, Romania, 2019, pp. 1-4, DOI: 10.1109/ATEE.2019.8724963, WOS:000475904500120.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ATEE.2019.8724963" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2019" data-type="Conference papers">
+<div class="pub-year">2019</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Guidelines for Small Size Samples Biostatistics in Current Medical Practice</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">George Calin Seritan, Felix-Constantin Adochiei, Bogdan-Adrian Enache, Gladiola Petroiu-Andruseac, Cristina-Daniela Enache, Dana Adriana Dascultu, Cristina Adriana Becheanu, Alexandru Ulmeanu, &quot;Guidelines for Small Size Samples Biostatistics in Current Medical Practice&quot;, 2019 E-Health and Bioengineering Conference (EHB), Iasi, Romania, 2019, pagini 1-4, DOI: 10.1109/EHB47216.2019.8970086, WOS:000558648300215 / https://ieeexplore.ieee.org/abstract/document/8970086</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB47216.2019.8970086" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2019" data-type="Conference papers">
+<div class="pub-year">2019</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>A Real-Time WebGL Rendering Piepeline for MRI Using RayCasting Tranfer Functions</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">R. Ciucu, F. Adochiei, I. Adochiei, F. Argatu, C. M. Larco, L. Grigorie, &quot;A Real-Time WebGL Rendering Piepeline for MRI Using RayCasting Tranfer Functions&quot;, ICNBME 2019: 4th International Conference on Nanotechnologies and Biomedical Engineering, Chisnau, Moldova, 2019, pagini 529-534, https://link.springer.com/chapter/10.1007/978-3-030-31866-6_95 , WOS:000552314200095.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1007/978-3-030-31866-6_95" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2019" data-type="Conference papers">
+<div class="pub-year">2019</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Modelling the Discharge of a Lithium Iron Phosphate Battery at Low Temperatures</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">B. Enache, S. Grigorescu, G. Seritan, F. Argatu, F. Adochiei and L. Constantinescu, &quot;Modelling the Discharge of a Lithium Iron Phosphate Battery at Low Temperatures,&quot; 2019 11th International Symposium on Advanced Topics in Electrical Engineering (ATEE), Bucharest, Romania, 2019, pagini 1-6, DOI: 10.1109/ATEE.2019.8724901, WOS:000475904500058 / http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8724901&amp;isnumber=8724732 .</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ATEE.2019.8724901" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2019" data-type="Conference papers">
+<div class="pub-year">2019</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Complex Embedded System for Stress Quantification</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Ioana-Raluca Adochiei, Felix Adochiei, Costin Cepisca, George Serițan, Bogdan Enache, Florin Argatu, Radu Ciucu, &quot;Complex Embedded System for Stress Quantification,&quot; 2019 11th International Symposium on Advanced Topics in Electrical Engineering (ATEE), Bucharest, Romania, 2019, pagini 1-4, DOI: 10.1109/ATEE.2019.8724892, WOS:000475904500049 / http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8724892&amp;isnumber=8724732 .</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ATEE.2019.8724892" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2019" data-type="Conference papers">
+<div class="pub-year">2019</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Performance Evaluation of a Partially Shaded PV cell with Different Bus Bars Configurations</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">George-Calin Seritan, Sorin-Dan Grigorescu, Bogdan-Adrian Enache, Florin Ciprian Argatu, Felix Constantin Adochiei, Teodor Icleanu, &quot;Performance Evaluation of a Partially Shaded PV cell with Different Bus Bars Configurations&quot;, 2019 54th International Universities Power Engineering Conference (UPEC), Bucharest, Romania, 2019, pagini 1-4, DOI: 10.1109/UPEC.2019.8893437, WOS:000619338200001</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/UPEC.2019.8893437" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2019" data-type="Conference papers">
+<div class="pub-year">2019</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Power Quality Analyzer for Smart Grid-Smart Home Applications</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Florin-Ciprian Argatu, Vlad Brezoianu, Violeta Vasilica Argatu, Bogdan-Adrian Enache, Felix-Constantin Adochiei, Teodor Icleanu, &quot;Power Quality Analyzer for Smart Grid-Smart Home Applications&quot;, 2019 54th International Universities Power Engineering Conference (UPEC), Bucharest, Romania, 2019, pagini 1-4, DOI: 10.1109/UPEC.2019.8893501, WOS:000619338200043 .</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/UPEC.2019.8893501" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2019" data-type="Conference papers">
+<div class="pub-year">2019</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Robotic Platform with Medical Applications in the Smart City Environment</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">SD Grigorescu, FC Argatu, SV Paturca, C Cepisca, GC Seritan, FC Adochiei, B Enache, &quot;Robotic Platform with Medical Applications in the Smart City Environment,&quot; 2019 11th International Symposium on Advanced Topics in Electrical Engineering (ATEE), Bucharest, Romania, 2019, pagini 1-6, DOI: 10.1109/ATEE.2019.8724993, WOS:000475904500148 / http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8724993&amp;isnumber=8724732 .</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ATEE.2019.8724993" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2019" data-type="Conference papers">
+<div class="pub-year">2019</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Alert and Surveillance System for Newborns</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">George Seritan, Monica Bujanovschi, Felix-Constantin Adochiei, Dan Voiculescu, Florin Ciprian Argatu, Sorin Dan Grigorescu, &quot;Alert and Surveillance System for Newborns&quot;, 2019 E-Health and Bioengineering Conference (EHB), Iasi, Romania, 2019, pagini 1-4, DOI: 10.1109/EHB47216.2019.8969987, WOS:000558648300119 .</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB47216.2019.8969987" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2019" data-type="Conference papers">
+<div class="pub-year">2019</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>A Scalable Real-Time Biomonitoring Platform</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Florin Ciprian Argatu, Felix Constantin Adochiei, Ioana Raluca Adochiei, Radu Ciucu, Vita Vasiliki, George Seritan, &quot;A Scalable Real-Time Biomonitoring Platform&quot;, 2019 E-Health and Bioengineering Conference (EHB), Iasi, Romania, 2019, pagini 1-4, DOI: 10.1109/EHB47216.2019.8970064, WOS:000558648300193</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB47216.2019.8970064" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2019" data-type="Journal articles">
+<div class="pub-year">2019</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>Innovative Devops for Artificial Intelligence</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">RR Ciucu, FC Adochiei, Ioana-Raluca Adochiei, F Argatu, GC Seriţan, B Enache, S Grigorescu, Violeta Vasilica Argatu, &quot;Innovative Devops for Artificial Intelligence&quot;, Scientific Bulletin of the Electrical Engineering Faculty, ISSN 2286-2455, 2019, Year 19, No. 1 (40), pagini 58-63, DOI: https://doi.org/10.1515/sbeef-2019-0011 , EBSCO. https://reference-global.com/download/article/10.1515/sbeef-2019-0011.pdf</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1515/sbeef-2019-0011" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2019" data-type="Journal articles">
+<div class="pub-year">2019</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>Tuning of the Wavelet Filters for the IMU Data Based on the PDC Method and the GPS Solution in a Bi-Dimensional Navigation Application</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Ioana Raluca ADOCHIEI, Teodor Lucian GRIGORIE, Felix Constantin ADOCHIEI, &quot;Tuning of the Wavelet Filters for the IMU Data Based on the PDC Method and the GPS Solution in a Bi-Dimensional Navigation Application&quot;, INCAS BULLETIN, ISSN/eISSN 2066-8201 / 2247-4528, 2019, Volume 11, Issue 3, pagini 3–14, DOI: 10.13111/2066-8201.2019.11.3.1, Scopus. http://bulletin.incas.ro/files/adochiei-i-r__grigorie__adochiei-f-c__vol_11_iss_3.pdf, DOI: 10.13111/2066-8201.2019.11.3.1</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.13111/2066-8201.2019.11.3.1" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2019" data-type="Conference papers">
+<div class="pub-year">2019</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>A Data Analysis platform for high altitude bio monitoring using DEVOPS principles and time series machine learning</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Felix Constantin Adochiei, Radu Ciucu, Ioana Raluca Adochiei, Florin Ciprian Argatu, Ciprian-Marius Larco, Miron Casian, &quot;A Data Analysis platform for high altitude bio monitoring using DEVOPS principles and time series machine learning&quot;, pp: 18-24; Journal ISSN: 2414-4592, Article DOI: https://doi.org/10.20474/jater-5.1.2, 2019, Baza de date CROSS REF https://tafpublications.com/platform/Articles/full-jater5.1.2.php</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.20474/jater-5.1.2" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2018" data-type="Journal articles">
+<div class="pub-year">2018</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>Improvement Of Teaching Activities In Higher Education</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">George-Călin Serițan, Bogdan-Adrian Enache, Radu Porumb, Florin-Ciprian Argatu, Felix Constantin Adochiei, Vita Vasiliki, &quot;Improvement Of Teaching Activities In Higher Education&quot;, Revue Roumaine Des Sciences Techniques-Serie Electrotechnique Et Energetique, ISSN/eISSN 0035-4066 / 2344-9294, 2018, Vol. 63, nr. 4, pp. 437–440, DOI, WOS:000459843500014.</p></details>
+
+</div>
+</article>
+<article class="pub-row" data-year="2018" data-type="Conference papers">
+<div class="pub-year">2018</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Automatic control system for stage lights</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Iulian-Dan Stanescu, Bogdan-Adrian Enache, George-Calin Seritan, Sorin-Dan Grigorescu, Florin-Ciprian Argatu, Felix-Constantin Adochiei, &quot;Automatic control system for stage lights&quot;, 2018 International Symposium on Fundamentals of Electrical Engineering (ISFEE), Bucharest, Romania, 2018, pp. 1-4, DOI: 10.1109/ISFEE.2018.8742409, WOS:000480396400004 / https://ieeexplore.ieee.org/document/8742409 .</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ISFEE.2018.8742409" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2018" data-type="Conference papers">
+<div class="pub-year">2018</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Low cost platform for monitoring honey production and bees health</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">George Calin Seritan, Bogdan-Adrian Enache, Florin Ciprian Argatau, Felix Constantin Adochiei, Stefan Toader, &quot;Low cost platform for monitoring honey production and bees health&quot;, 2018 IEEE International Conference on Automation, Quality and Testing, Robotics (AQTR), Cluj-Napoca, Romania, 2018, pagini 1-4, DOI: 10.1109/AQTR.2018.8402704, WOS:000450065900007.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/AQTR.2018.8402704" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2017" data-type="Conference papers">
+<div class="pub-year">2017</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>A Non-Contact Heart-Rate Monitoring System for Long-Term Assessments of HRV</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Ciucu, Radu-Ion; Dragomir, Daniel-Andrei; Adochiei, Ioana-Raluca; Seritan, George-Calin; Cepisca, Costin; Adochiei, Felix-Constantin, &quot;A Non-Contact Heart-Rate Monitoring System for Long-Term Assessments of HRV&quot;, 2017 10th International Symposium on Advanced Topics in Electrical Engineering (ATEE), Bucharest, Romania, 2017, pagini 1-4, DOI: 10.1109/ATEE.2017.7905060, WOS:000403399400002.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ATEE.2017.7905060" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2017" data-type="Conference papers">
+<div class="pub-year">2017</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Use of Pedagogical Agents to Build Multiple Choice Equations for an Electric Workshop Based on LabVIEW</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Grigorescu Sorin Dan; Cepisca Costin; Paturca Sanda Victorinne; Ghita Octavian Mihai; Seritan George; Argatu Florin; Adochiei Felix; Banica Cosmin, &quot;Use of Pedagogical Agents to Build Multiple Choice Equations for an Electric Workshop Based on LabVIEW&quot;, 2017 10th International Symposium on Advanced Topics in Electrical Engineering (ATEE), Bucharest, Romania, 2017, pagini 1-4, DOI: 10.1109/ATEE.2017.7905106, WOS:000403399400178.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ATEE.2017.7905106" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2016" data-type="Journal articles">
+<div class="pub-year">2016</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>Remote Control of an Autonomous Robotic Platform Based on Eye Tracking</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">A. Pasarica, G. Andruseac, I. Adochiei, C. Rotariu, H. Costin, F. Adochiei, &quot;Remote Control of an Autonomous Robotic Platform Based on Eye Tracking&quot;, Advances in Electrical and Computer Engineering, ISSN/eISSN 1582-7445 / 1844-7600, 2016, Volumul 16, Numărul 4, pagini 95-100, DOI: 10.4316/AECE.2016.04015, WOS:000390675900015.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.4316/AECE.2016.04015" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2016" data-type="Conference papers">
+<div class="pub-year">2016</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Educational Technologies to Support Medical Education</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Gladiola Andruseac, Adrian Adăscăliţei, Ioana Adochiei, Daniel Boldureanu, Carmen Luiza Costuleanu, Felix Adochiei, Gabriela Boldureanu, &quot;Educational Technologies to Support Medical Education&quot;, Proceedings of the 11th International Conference On Virtual Learning (ICVL), Craiova, Romania, 2016, pagini 25-31, DOI, WOS:000444941400001.</p></details>
+
+</div>
+</article>
+<article class="pub-row" data-year="2016" data-type="Conference papers">
+<div class="pub-year">2016</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>An Automated Inertial Indoor Positioning and Fall Detection System for Elder</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">IR Edu, FC Adochiei, L Grigorie, A Pasarica, N Jula, &quot;An Automated Inertial Indoor Positioning and Fall Detection System for Elder&quot;, 3rd International Conference on Nanotechnologies and Biomedical Engineering, Chisinau, Moldova, 2016, pagini 424-427, DOI https://doi.org/10.1007/978-981-287-736-9_100 , WOS:000367995500098.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1007/978-981-287-736-9_100" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2016" data-type="Conference papers">
+<div class="pub-year">2016</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Health Technology Management</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">G Andruseac, A Pasarica, I Adochiei, Nikolae Jula, Felix C Adochiei,Labeling methods in medical imaging, Conferința &quot;Health Technology Management&quot; 3, Chișinău, Moldova, 6-7 octombrie 2016</p></details>
+
+</div>
+</article>
+<article class="pub-row" data-year="2016" data-type="Books &amp; teaching materials">
+<div class="pub-year">2016</div>
+<div class="pub-body">
+<div class="pub-meta">Books &amp; teaching materials</div>
+<h3>Metode inovative pentru investigarea cuplărilor biosistemelor dinamice complexe</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">F. Adochiei. Metode inovative pentru investigarea cuplărilor biosistemelor dinamice complexe. Ed. PRINTECH, 2016. ISBN 978-606-23-0714-1.</p></details>
+
+</div>
+</article>
+<article class="pub-row" data-year="2015" data-type="Conference papers">
+<div class="pub-year">2015</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>ECG generation methods for testing and maintenance of cardiac monitors</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Radu-Ion Ciucu, George-Călin Seriţan, Daniel-Andrei Dragomir, Costin Cepişcă, Felix-Constantin Adochiei, &quot;ECG generation methods for testing and maintenance of cardiac monitors&quot;, 2015 EHB E-Health And Bioengineering Conference (EHB), Iasi, Romania, 2015, pp. 1-4, DOI: 10.1109/EHB.2015.7391513, WOS:000380397900166.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB.2015.7391513" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2015" data-type="Conference papers">
+<div class="pub-year">2015</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Inertial sensor signals denoising with directed transfer function</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">I. Edu, T. L. Grigorie, F. Adochiei, C. Rotaru and N. Jula, &quot;Inertial sensor signals denoising with directed transfer function,&quot; 2015 9th International Symposium on Advanced Topics in Electrical Engineering (ATEE), Bucharest, Romania, 2015, pagini 945-948, DOI: 10.1109/ATEE.2015.7133938, WOS:000368159800175 / http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ATEE.2015.7133938" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2015" data-type="Conference papers">
+<div class="pub-year">2015</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Inertial positioning precision improvement through sensors denoising by using wavelet functions tuned with DTF method</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">T. L. Grigorie, I. R. Edu and F. C. Adochiei, &quot;Inertial positioning precision improvement through sensors denoising by using wavelet functions tuned with DTF method&quot;, 6th International Conference on Information, Intelligence, Systems and Applications (IISA), Corfu, Greece, 2015, pagini 1-6, DOI: 10.1109/IISA.2015.7388108, WOS:000381572400155 / http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7388108&amp;isnumber=7387951</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/IISA.2015.7388108" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2015" data-type="Conference papers">
+<div class="pub-year">2015</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Experimental validation of a low-cost integrated INS/GPS navigator for assistive positioning</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">T. L. Grigorie, S. D. George, P. Negrea, F. Adochiei and I. E. Adochiei, &quot;Experimental validation of a low-cost integrated INS/GPS navigator for assistive positioning,&quot; 2015 EHB E-Health And Bioengineering Conference (EHB), Iasi, Romania, 2015, pagini 1-4, DOI: 10.1109/EHB.2015.7391537, WOS:000380397900190 / http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7391537&amp;isnumber=7391343 .</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB.2015.7391537" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2015" data-type="Conference papers">
+<div class="pub-year">2015</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Assistive inertial 3D positioning MEMS system</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">I. E. Adochiei, T. L. Grigorie, F. Adochiei, P. Negrea, V. Cristian and N. Jula, &quot;Assistive inertial 3D positioning MEMS system&quot;, E-Health And Bioengineering Conference (EHB), Iasi, Romania, 2015, pagini 1-4, DOI: 10.1109/EHB.2015.7391536, WOS:000380397900189 / http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7391536&amp;isnumber=7391343 .</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB.2015.7391536" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2015" data-type="Conference papers">
+<div class="pub-year">2015</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Platform for bio-monitoring of vital parameters in critical infrastructures operation</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">C. Cepisca, F. C. Adochiei, S. Potlog, C. K. Banica and G. C. Seritan, &quot;Platform for bio-monitoring of vital parameters in critical infrastructures operation&quot;, 2015 7th International Conference on Electronics, Computers and Artificial Intelligence (ECAI), Bucharest, Romania, 2015, pagini E-7-E-10, DOI: 10.1109/ECAI.2015.7301144, WOS:000370971100009 / http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7301144&amp;isnumber=7301133.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ECAI.2015.7301144" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2015" data-type="Conference papers">
+<div class="pub-year">2015</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>A Remote-Controlled Mobile Platform for Identifying Indoor Human in Risk Situations</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Andruseac G., Grigorie, T.L., Adochiei Felix, Rotaru C., Pasarica A, Costin H, Adochiei I, &quot;A Remote-Controlled Mobile Platform for Identifying Indoor Human in Risk Situations&quot;, 2015 E-Health and Bioengineering Conference (EHB), Iasi, Romania, 2015, pagini 1-4, DOI: 10.1109/EHB.2015.7391546, WOS:000380397900199.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB.2015.7391546" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2015" data-type="Conference papers">
+<div class="pub-year">2015</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Training Program for Dyslexic Children Using Educational Robotics</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Andruseac G., Adochiei I, Pasarica A., Adochiei Felix-Constantin, Corciova C., Costin H., &quot;Training Program for Dyslexic Children Using Educational Robotics&quot;, 2015 E-Health and Bioengineering Conference (EHB), Iasi, Romania, 2015, pagini 1-4, DOI: 10.1109/EHB.2015.7391547, WOS:000380397900200.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB.2015.7391547" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2015" data-type="Conference papers">
+<div class="pub-year">2015</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Assistive Positioning System Based Inertial Techniques and Wavelet Denoising</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">T.L. Grigorie, P. Negrea, I.R. Edu, F.C. Adochiei, &quot;Assistive Positioning System Based Inertial Techniques and Wavelet Denoising&quot;, 8th International Conference on Pervasive Technologies Related to Assistive Environments (PETRA 2015), Corfu, Greece, 2015, pagini 1-4, DOI https://doi.org/10.1145/2769493.2769504 , WOS:000619985600021.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1145/2769493.2769504" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2015" data-type="Journal articles">
+<div class="pub-year">2015</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>Tuning of a Wavelet Filter for Miniature Accelerometers Denoising Based Joint Symbolic Dynamics (JSD) Method</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Ioana Raluca Edu, Felix Constantin Adochiei, Teodor Lucian Grigorie, Ruxandra Mihaela Botez, &quot;Tuning of a Wavelet Filter for Miniature Accelerometers Denoising Based Joint Symbolic Dynamics (JSD) Method&quot;, INCAS Bulletin, ISSN/eISSN 2066-8201 / 2247-4528, 2015, Volumul 7, Numărul 1, pagini 71-80, DOI: 10.13111/2066-8201.2015.7.2.7, Scopus. http://bulletin.incas.ro/files/edu__adochiei__grigorie__botez__vol_7_iss_2.pdf</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.13111/2066-8201.2015.7.2.7" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2015" data-type="Journal articles">
+<div class="pub-year">2015</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>Inertial Sensor Signals Denoising with Wavelet Transform</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Ioana-Raluca Edu, Felix-Constantin Adochiei, Radu Obreja, Constantin Rotaru, Teodor Lucian Grigorie, &quot;Inertial Sensor Signals Denoising with Wavelet Transform&quot;, INCAS Bulletin, ISSN/eISSN 2066-8201 / 2247-4528, 2015, Volumul 7, Numărul 1, pagini 57–64, DOI: 10.13111/2066-8201.2015.7.1.6, Scopus. http://bulletin.incas.ro/files/edu___all__vol_7_iss_1.pdf</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.13111/2066-8201.2015.7.1.6" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2015" data-type="Conference papers">
+<div class="pub-year">2015</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Linear And Nonlinear Methods For Dynamical System Correlation Analysis</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Adochiei F.C, EduI , JulaN., &quot;Linear And Nonlinear Methods For Dynamical System Correlation Analysis&quot;, 5thInternational Conference “Telecommunications, Electronics and Informatics” ICTEI 2015, pp: 450-453, Baza de date Google Scholar; https://ibn.idsi.md/sites/default/files/imag_file/450-453.pdf</p></details>
+<div class="pub-actions"><a href="https://ibn.idsi.md/sites/default/files/imag_file/450-453.pdf" target="_blank" rel="noopener">Publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2015" data-type="Books &amp; teaching materials">
+<div class="pub-year">2015</div>
+<div class="pub-body">
+<div class="pub-meta">Books &amp; teaching materials</div>
+<h3>Senzori biomedicali și instrumentație</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">G. Serițan, F. Adochiei, F. Argatu, C. Cepișcă. Senzori biomedicali și instrumentație. Ed. Politehnica Press, 2015. ISBN 978-606-515-650-0.</p></details>
+
+</div>
+</article>
+<article class="pub-row" data-year="2014" data-type="Conference papers">
+<div class="pub-year">2014</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Trends in the Development of Miniature Optical Accelerometers</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Teodor Grigorie, Ioana Edu, Felix Adochiei, &quot;Trends in the Development of Miniature Optical Accelerometers&quot;, 14th International Multidisciplinary Scientific Geoconference (SGEM), Albena, Bulgaria, 2014, pagini 1-4, DOI: 10.5593/SGEM2014/B61/S24.028, WOS:000366136600028.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.5593/SGEM2014/B61/S24.028" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2014" data-type="Conference papers">
+<div class="pub-year">2014</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Numerical Method for Processing and Analysing Flying Effects on Pilots</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Ioana-Raluca Edu, Felix-Constantin Adochiei, PG Matei, C Rotaru, &quot;Numerical Method for Processing and Analysing Flying Effects on Pilots&quot;, 10th International Conference on Communications (COMM), Bucharest, Romania, 2014, pagini 1-4, DOI: 10.1109/ICComm.2014.6866701, WOS:000345844600045 / https://ieeexplore.ieee.org/document/6866701 .</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/ICComm.2014.6866701" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2014" data-type="Conference papers">
+<div class="pub-year">2014</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>New Tuning Method of the Wavelet Function for Inertial Sensor Signals Denoising</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Edu, I.R., Adochiei, F.C., Obreja, R., Rotaru, C., Grigorie, T.L., &quot;New Tuning Method of the Wavelet Function for Inertial Sensor Signals Denoising&quot;, 18th International Conference on Circuits, Systems, Communications and Computers (CSCC &#x27;14), Santorini Island, Greece, 2014, pagini 153-157, DOI, Scopus . http://www.inase.org/library/2014/santorini/bypaper/MATH/MATH-22.pdf</p></details>
+<div class="pub-actions"><a href="http://www.inase.org/library/2014/santorini/bypaper/MATH/MATH-22.pdf" target="_blank" rel="noopener">Publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2014" data-type="Conference papers">
+<div class="pub-year">2014</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>New Tuning Method of the Wavelet Function for Inertial Sensors Signals Denoising</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Edu, Ioana-Raluca; Adochiei, Felix-Constantin; Negrea, P.; Rotaru, Constantin; Grigorie, Teodor Lucian, &quot;New Tuning Method of the Wavelet Function for Inertial Sensors Signals Denoising&quot;, CSCC&#x27;14 - Advances in Applied and Pure Mathematics, Santorini, Greece, 2014, pagini 153-157, DOI / hyperlink: http://inase.org/library/2014/santorini/bypaper/MATH/MATH-22.pdf, EBSCO / Scopus . https://www.scopus.com/pages/publications/84963846433?origin=resultslist</p></details>
+<div class="pub-actions"><a href="http://inase.org/library/2014/santorini/bypaper/MATH/MATH-22.pdf" target="_blank" rel="noopener">Publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2014" data-type="Conference papers">
+<div class="pub-year">2014</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Unexpected Cardiovascular Coupling in Schizophrenia</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Ioana EDU, Felix ADOCHIEI, Narcis ADOCHIEI, Nicolae JULA, &quot;Unexpected Cardiovascular Coupling in Schizophrenia&quot;, 8th International Conference on Microelectronics and Computer Science, Chisinau, Republic of Moldova, October 22-25, 2014, pagini 414-416, DOI / hyperlink: http://www.icmcs.utm.md/icmcs_2014/volumul/Volume%201/Sectii/C_bs/2_Edu_icmcs_2014_paper_02.10%20-%20felix%20_1_.pdf, EBSCO.</p></details>
+<div class="pub-actions"><a href="http://www.icmcs.utm.md/icmcs_2014/volumul/Volume%201/Sectii/C_bs/2_Edu_icmcs_2014_paper_02.10%20-%20felix%20_1_.pdf" target="_blank" rel="noopener">Publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2014" data-type="Conference papers">
+<div class="pub-year">2014</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Tuning method of the wavelet function for gyro sensor signals denoising with wavelet transform</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">IR Edu, FC Adochiei, P Negrea, C Rotaru, TL Grigorie, &quot;Tuning method of the wavelet function for gyro sensor signals denoising with wavelet transform&quot;, International Conference of Aerospace Sciences “AEROSPATIAL 2014&quot;</p></details>
+
+</div>
+</article>
+<article class="pub-row" data-year="2013" data-type="Journal articles">
+<div class="pub-year">2013</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>A new normalised short time PDC for dynamic coupling analyses</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">F.-C. Adochiei, S. Schulz, I.-R. Edu, H. Costin, A. Voss, &quot;A new normalised short time PDC for dynamic coupling analyses&quot;, Biomedical Engineering-Biomedizinische Technik, ISSN/eISSN 0013-5585 / 1862-278X, 2013, Volume 58, numar, pag. 1-3, DOI 10.1515/bmt-2013-4167, WOS:000497714000325, WOS:000497714000020</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1515/bmt-2013-4167" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2013" data-type="Journal articles">
+<div class="pub-year">2013</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>A complex system for telemonitoring of medical vital signs</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">H Costin, C Rotariu, Ioana Alexa, Gladiola Andruseac, F Adochiei, R Ciobotariu, &quot;A complex system for telemonitoring of medical vital signs&quot;, The Medical-Surgical Journal, ISSN/eISSN 0040-6018 / eISSN, 2013, Volumul 117, Numărul 3, pagini 825-832, DOI, WOS:000409074200054.</p></details>
+
+</div>
+</article>
+<article class="pub-row" data-year="2013" data-type="Journal articles">
+<div class="pub-year">2013</div>
+<div class="pub-body">
+<div class="pub-meta">Journal articles</div>
+<h3>Cardiovascular and cardiorespiratory coupling analyses: a review</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Steffen Schulz, Felix-Constantin Adochiei, I.R Edu, S. Rico, Costin Hariton, Karl-Jürgen Bär, Voss Andreas, &quot;Cardiovascular and cardiorespiratory coupling analyses: a review&quot;, Philosophical Transactions of the Royal Society A-Mathematical Physical And Engineering Sciences, ISSN/eISSN 1364-503X / 1471-2962, 2013, Volumul 371, Numărul 1997, pp. 1-25, DOI: 10.1098/rsta.2012.0191, WOS:000330309500012.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1098/rsta.2012.0191" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2013" data-type="Conference papers">
+<div class="pub-year">2013</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Changed neuronal coupling in schizophrenia</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Adochiei F, Edu I, Schulz S, Costin H, Voss A, &quot;Changed neuronal coupling in schizophrenia&quot;, 4rd International Conference on E-Health and Bioengineering (EHB), Iasi, Romania, 2013, pagini 1-4, DOI: 10.1109/EHB.2013.6707344, WOS:000346672900112.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB.2013.6707344" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2013" data-type="Conference papers">
+<div class="pub-year">2013</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Experimental and Numerical Evaluation of the Retention Force for Metallic Matrix Attachment Systems</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Paul Virgil Rosu, Mihai Mihaila-Andres, Camelia Ionescu, Felix Adochiei, &quot;Experimental and Numerical Evaluation of the Retention Force for Metallic Matrix Attachment Systems&quot;, 4th IEEE International Conference on E-Health and Bioengineering (EHB), Iasi, Romania, 2013, pagini 1-4, DOI: 10.1109/EHB.2013.6707350, WOS:000346672900118.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB.2013.6707350" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2013" data-type="Conference papers">
+<div class="pub-year">2013</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Increased QT Variability Index as a Marker for a Cardiac Autonomic Dysregulation in Schizophrenia</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Hariton Costin, Steffen Schulz, Karl-Jürgen Bär, Ioana Alexa, Felix Adochiei, Andreas Voss, &quot;Increased QT Variability Index as a Marker for a Cardiac Autonomic Dysregulation in Schizophrenia&quot;, 2013 E-Health and Bioengineering Conference (EHB), Iasi, Romania, NOV 21-23, 2013, pagini 1-4, DOI: 10.1109/EHB.2013.6707333, IEEE Xplore / WOS:000346672900101.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1109/EHB.2013.6707333" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2013" data-type="Conference papers">
+<div class="pub-year">2013</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>A smart control structure of a closed-loop miniature accelerometer</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Grigorie, T.L., Sandu, D.G., Edu, I., Adochiei, F.C., Obreja R., “A smart control structure of a closed-loop miniature accelerometer”, International Journal of Arts &amp; Sciences (IJAS) Conference, Paris, France, April 8-11, 2013, Baza de date Google Scholar; http://ijas2013paris.sched.org/event/10Ohzqu/a-smart-control-structure-of-a-closed-loop-miniature-accelerometer</p></details>
+<div class="pub-actions"><a href="http://ijas2013paris.sched.org/event/10Ohzqu/a-smart-control-structure-of-a-closed-loop-miniature-accelerometer" target="_blank" rel="noopener">Publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2013" data-type="Conference papers">
+<div class="pub-year">2013</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Fabrication Technologies for Miniaturized Accelerometers and Gyros</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Edu, I.R., Adochiei, F., Negrea, P., Obreja, R., Cepisca, C., Grigorie, T.L., “Fabrication Technologies for Miniaturized Accelerometers and Gyros”, pp: 1-4; 1st International Conference New Challenges in Aerospace Sciences (NCAS 2013), Bucharest, 7-8 November, 2013</p></details>
+
+</div>
+</article>
+<article class="pub-row" data-year="2012" data-type="Books &amp; teaching materials">
+<div class="pub-year">2012</div>
+<div class="pub-body">
+<div class="pub-meta">Books &amp; teaching materials</div>
+<h3>Electromechanical Converters — Selected Topics in Applied Electrotechnics</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">M. Covrig, F. Adochiei, V. K. Stergios. Electromechanical Converters — Selected Topics in Applied Electrotechnics. IWN, Athens, 2012. ISBN 978-960-508-052-5.</p></details>
+
+</div>
+</article>
+<article class="pub-row" data-year="2011" data-type="Conference papers">
+<div class="pub-year">2011</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>A Wireless Low-Power Pulse Oximetry System for Patient Telemonitoring</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Felix Adochiei, Cristian Rotariu, Razvan Ciobotariu and Hariton Costin, &quot;A Wireless Low-Power Pulse Oximetry System for Patient Telemonitoring&quot;, 7th International Symposium on Advanced Topics in Electrical Engineering (ATEE), Bucharest, Romania, 2011, pp. 1-4, DOI: https://ieeexplore.ieee.org/abstract/document/5952177 , WOS:000310701200041.</p></details>
+<div class="pub-actions"><a href="https://ieeexplore.ieee.org/abstract/document/5952177" target="_blank" rel="noopener">Publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2011" data-type="Conference papers">
+<div class="pub-year">2011</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Comparative Filtering Methods for Noisy ECG Signals</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Felix Adochiei, Ioana Edu and Narcis Adochiei, &quot;Comparative Filtering Methods for Noisy ECG Signals&quot;, 3rd International Conference on E-Health and Bioengineering (EHB), Iasi, Romania, 2011, pagini 1-4, DOI, WOS:000304806300023.</p></details>
+
+</div>
+</article>
+<article class="pub-row" data-year="2011" data-type="Conference papers">
+<div class="pub-year">2011</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Wireless Monitoring System for Pulse Wave Velocity as Response to Different Types of Stress</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Razvan Ciobotariu, Cristian Rotariu, Felix Adochiei, Hariton Costin and Ioan Tudosa, &quot;Wireless Monitoring System for Pulse Wave Velocity as Response to Different Types of Stress&quot;, 3rd International Conference on E-Health and Bioengineering (EHB), Iasi, Romania, 2011, pagini 1-4, DOI: https://ieeexplore.ieee.org/abstract/document/6150344 , WOS:000304806300036.</p></details>
+<div class="pub-actions"><a href="https://ieeexplore.ieee.org/abstract/document/6150344" target="_blank" rel="noopener">Publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2011" data-type="Conference papers">
+<div class="pub-year">2011</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Telemedicine System for Remote Blood Pressure and Heart Rate Monitoring</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Cristian Rotariu, Alexandru Pasarica, Hariton Costin, Felix Adochiei and Razvan Ciobotariu, &quot;Telemedicine System for Remote Blood Pressure and Heart Rate Monitoring&quot;, 3rd International Conference on E-Health and Bioengineering (EHB), Iasi, Romania, 2011, pagini 1-4, DOI: https://ieeexplore.ieee.org/abstract/document/6150342 , WOS:000304806300034.</p></details>
+<div class="pub-actions"><a href="https://ieeexplore.ieee.org/abstract/document/6150342" target="_blank" rel="noopener">Publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2011" data-type="Conference papers">
+<div class="pub-year">2011</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>ECG Waves and Features Extraction Using Wavelet Multi-Resolution Analysis</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Narcis Adochiei, Valeriu David, Felix Adochiei, Ioan Tudosa, &quot;ECG Waves and Features Extraction Using Wavelet Multi-Resolution Analysis&quot;, 3rd International Conference on E-Health and Bioengineering (EHB), Iasi, Romania, 2011, pagini 1-4, DOI: https://ieeexplore.ieee.org/abstract/document/6150396 , WOS:000304806300088.</p></details>
+<div class="pub-actions"><a href="https://ieeexplore.ieee.org/abstract/document/6150396" target="_blank" rel="noopener">Publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2011" data-type="Conference papers">
+<div class="pub-year">2011</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Wireless Breathing System for Long Term Telemonitoring of Respiratory Activity</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Razvan Ciobotariu, Cristian Rotariu, Felix Adochiei and Hariton Costin, &quot;Wireless Breathing System for Long Term Telemonitoring of Respiratory Activity&quot;, 7th International Symposium on Advanced Topics in Electrical Engineering (ATEE), Bucharest, Romania, 2011, pagini 1-4, DOI: https://ieeexplore.ieee.org/abstract/document/5952197 , WOS:000310701200061.</p></details>
+<div class="pub-actions"><a href="https://ieeexplore.ieee.org/abstract/document/5952197" target="_blank" rel="noopener">Publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2011" data-type="Conference papers">
+<div class="pub-year">2011</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>On The HRV Signal Modification Of The ECG Signal Under The Influence Of Exposure To Electromagnetic Fields</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Narcis Adochiei, Ioan Tudosai, Felix Adochiei, &quot;On The HRV Signal Modification Of The ECG Signal Under The Influence Of Exposure To Electromagnetic Fields&quot;, 7th International Symposium on Advanced Topics in Electrical Engineering (ATEE), Bucharest, Romania, 2011, pagini 1-4, DOI: https://ieeexplore.ieee.org/abstract/document/5952182 , WOS:000310701200046.</p></details>
+<div class="pub-actions"><a href="https://ieeexplore.ieee.org/abstract/document/5952182" target="_blank" rel="noopener">Publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2011" data-type="Conference papers">
+<div class="pub-year">2011</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Telemonitoring of Vital Signs – An Effective Tool for Ambient Assisted Living</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Costin H., Rotariu C., Adochiei F., Ciobotariu R., Andruseac G., Corciova F., &quot;Telemonitoring of Vital Signs – An Effective Tool for Ambient Assisted Living&quot;, 3rd International Conference on Advancements of Medicine and Health Care through Technology, Cluj Napoca, Romania, 2011, pp. 1-4, DOI: https://doi.org/10.1007/978-3-642-22586-4_14 , WOS:000308454900014 / https://link.springer.com/chapter/10.1007/978-3-642-22586-4_14 .</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1007/978-3-642-22586-4_14" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2011" data-type="Conference papers">
+<div class="pub-year">2011</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>An Integrated System for Wireless Monitoring of Chronic Patients and Elderly People</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">C. Rotariu, H. Costin, G. Andruseac, R. Ciobotariu and F. Adochiei, &quot;An Integrated System for Wireless Monitoring of Chronic Patients and Elderly People&quot;, 15th International Conference on System Theory, Control and Computing, Sinaia, 2011, pagini 1-4, DOI / hyperlink: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6085743&amp;isnumber=6085648, IEEE Xplore.</p></details>
+<div class="pub-actions"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6085743&amp;isnumber=6085648" target="_blank" rel="noopener">Publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2011" data-type="Conference papers">
+<div class="pub-year">2011</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Internet Remote Control System for a Robotic Arm</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Petru Borta, Felix Adochiei. “Internet Remote Control System for a Robotic Arm”,Lucrare publicată în volumul Conferintei Naţionale de Bioinginerie pentru Studenţi si Tineri Cercetători, Ediţia a XIV-a, Mai 19-22, 2011, Iasi, Romania. ISSN: 978-606-13-0390-8. Pag. 161 - 166</p></details>
+
+</div>
+</article>
+<article class="pub-row" data-year="2010" data-type="Conference papers">
+<div class="pub-year">2010</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>TELEMON - An Embedded Wireless Monitoring and Alert System for Homecare</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">otariu C., Costin H., Ciobotariu R., Adochiei F., Amariutei I., Andruseac G., &quot;TELEMON - An Embedded Wireless Monitoring and Alert System for Homecare&quot;, XII Mediterranean Conference on Medical and Biological Engineering and Computing 2010, Springer, Berlin, Heidelberg, 2010, pagini 1-4, DOI: https://doi.org/10.1007/978-3-642-13039-7_221, Springer / IFMBE Proceedings.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.1007/978-3-642-13039-7_221" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+<article class="pub-row" data-year="2009" data-type="Conference papers">
+<div class="pub-year">2009</div>
+<div class="pub-body">
+<div class="pub-meta">Conference papers</div>
+<h3>Real Time Telemonitoring of Medical Vital Signs</h3>
+<details class="pub-detail"><summary>Full reference</summary><p class="citation">Hariton Costin, Cristian Rotariu, Ioana Alexa, Gina Constantinescu, V Cehan, B Dionisie, Gladiola Andruseac, D Arotaritei, B Mustaţă, Octavia Morancea, F Adochiei, R Ciubotariu, E Crauciuc, Monica Scutariu, &quot;Real Time Telemonitoring of Medical Vital Signs&quot;, 2nd WSEAS International Conference on Biomedical Electronics and Biomedical Informatics, Moscow, Russia, 2009, pagini 1-4, DOI: 10.5555/1946539.1946562, WOS:000273246200021.</p></details>
+<div class="pub-actions"><a href="https://doi.org/10.5555/1946539.1946562" target="_blank" rel="noopener">DOI / publisher ↗</a></div>
+</div>
+</article>
+</div>
+<p class="empty" id="empty" hidden>No publications match your search. Try another term or reset the filters.</p>
+
+<p class="note">Catalogue drawn from the supplied publication record (CNATDCU format). Dates reflect the publication year; the catalogue is a record of supplied outputs rather than a live bibliometric total.</p>
+</div>
+</section>
+</main>
+
+<footer class="site">
+<div class="wrap foot">
+<div>
+<div class="fs">Electrical engineering · POLITEHNICA Bucharest</div>
+<div class="fb">Felix-Constantin Adochiei</div>
+</div>
+<nav aria-label="Academic profiles">
+<a href="mailto:felix.adochiei@upb.ro">Email ↗</a>
+<a href="https://scholar.google.com/citations?user=iZap6FMAAAAJ&amp;hl=ro" target="_blank" rel="noopener">Google Scholar ↗</a>
+<a href="https://orcid.org/0000-0001-8176-0113" target="_blank" rel="noopener">ORCID ↗</a>
+</nav>
+<div class="copy">© 2026 Felix-Constantin Adochiei · Bucharest, Romania</div>
+</div>
+</footer>
+
+<script>
+var mb=document.getElementById('menuBtn'), nav=document.getElementById('nav');
+mb.addEventListener('click',function(){var open=nav.classList.toggle('open');mb.setAttribute('aria-expanded',open?'true':'false');});
+nav.addEventListener('click',function(e){ if(e.target.tagName==='A') nav.classList.remove('open'); });
+
+var q=document.getElementById('q'), fy=document.getElementById('fy'), ft=document.getElementById('ft');
+var rows=[].slice.call(document.querySelectorAll('.pub-row'));
+var countEl=document.getElementById('count'), emptyEl=document.getElementById('empty');
+function apply(){
+  var term=(q.value||'').trim().toLowerCase();
+  var yv=fy.value, tv=ft.value, shown=0;
+  rows.forEach(function(r){
+    var okY=!yv||r.getAttribute('data-year')===yv;
+    var okT=!tv||r.getAttribute('data-type')===tv;
+    var okQ=!term||r.textContent.toLowerCase().indexOf(term)!==-1;
+    var vis=okY&&okT&&okQ;
+    r.style.display=vis?'':'none';
+    if(vis) shown++;
+  });
+  countEl.textContent=shown;
+  emptyEl.hidden=shown!==0;
+}
+q.addEventListener('input',apply);
+fy.addEventListener('change',apply);
+ft.addEventListener('change',apply);
+document.getElementById('reset').addEventListener('click',function(){q.value='';fy.value='';ft.value='';apply();});
+</script>
+</body>
+</html>
